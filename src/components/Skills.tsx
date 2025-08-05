@@ -140,19 +140,19 @@ const Skills: React.FC = () => {
       technologies: [
         {
           name: "Figma",
-          icon: "https://github.com/LuftSoft/bui-ta-tan-ngoc/blob/master/dist/assets/tech_stack_icon/others/figma.svg",
+          icon: "https://github.com/LuftSoft/bui-ta-tan-ngoc/blob/master/dist/assets/tech_stack_icon/others/figma.svg?raw=true",
         },
         {
           name: "Git",
-          icon: "https://github.com/LuftSoft/bui-ta-tan-ngoc/blob/master/dist/assets/tech_stack_icon/others/git.svg",
+          icon: "https://github.com/LuftSoft/bui-ta-tan-ngoc/blob/master/dist/assets/tech_stack_icon/others/git.svg?raw=true",
         },
         {
           name: "GitHub",
-          icon: "https://github.com/LuftSoft/bui-ta-tan-ngoc/blob/master/dist/assets/tech_stack_icon/others/github.svg",
+          icon: "https://github.com/LuftSoft/bui-ta-tan-ngoc/blob/master/dist/assets/tech_stack_icon/others/github.svg?raw=true",
         },
         {
           name: "Postman",
-          icon: "https://github.com/LuftSoft/bui-ta-tan-ngoc/blob/master/dist/assets/tech_stack_icon/others/postman.svg",
+          icon: "https://github.com/LuftSoft/bui-ta-tan-ngoc/blob/master/dist/assets/tech_stack_icon/others/postman.svg?raw=true",
         },
         // { name: "Adobe XD", icon: "🔷" },
         // { name: "Webpack", icon: "📦" },
