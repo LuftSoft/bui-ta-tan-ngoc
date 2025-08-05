@@ -45,7 +45,7 @@ const About: React.FC = () => {
           <div>
             <div className="relative">
               <img
-                src="/dist/assets/avatar.jpg"
+                src="https://github.com/LuftSoft/bui-ta-tan-ngoc/tree/master/dist/assets/avatar.jpg"
                 alt="Profile"
                 className="w-full max-w-md mx-auto rounded-2xl shadow-2xl"
               />
@@ -81,7 +81,7 @@ const About: React.FC = () => {
             <div className="my-12"></div>
             <a
               className="inline-flex items-center px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-all duration-200 hover:scale-105 hover:shadow-lg"
-              href="/dist/assets/resume/CV_Bui_Ta_Tan_Ngoc.pdf"
+              href="https://github.com/LuftSoft/bui-ta-tan-ngoc/tree/master/dist/assets/resume/CV_Bui_Ta_Tan_Ngoc.pdf"
               download="CV_Bui_Ta_Tan_Ngoc.pdf"
             >
               <Download size={20} className="mr-2" />

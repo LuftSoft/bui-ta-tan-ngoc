@@ -16,18 +16,30 @@ const Skills: React.FC = () => {
       icon: Globe,
       color: "from-blue-500 to-cyan-500",
       technologies: [
-        { name: "React", icon: "/dist/assets/tech_stack_icon/fe/react.svg" },
-        { name: "Next.js", icon: "/dist/assets/tech_stack_icon/fe/nextjs.svg" },
+        {
+          name: "React",
+          icon: "https://github.com/LuftSoft/bui-ta-tan-ngoc/tree/master/dist/assets/tech_stack_icon/fe/react.svg",
+        },
+        {
+          name: "Next.js",
+          icon: "https://github.com/LuftSoft/bui-ta-tan-ngoc/tree/master/dist/assets/tech_stack_icon/fe/nextjs.svg",
+        },
         {
           name: "Angular",
-          icon: "/dist/assets/tech_stack_icon/fe/angular.svg",
+          icon: "https://github.com/LuftSoft/bui-ta-tan-ngoc/tree/master/dist/assets/tech_stack_icon/fe/angular.svg",
         },
         {
           name: "TypeScript",
-          icon: "/dist/assets/tech_stack_icon/fe/typescript.svg",
+          icon: "https://github.com/LuftSoft/bui-ta-tan-ngoc/tree/master/dist/assets/tech_stack_icon/fe/typescript.svg",
         },
-        { name: "Zod", icon: "/dist/assets/tech_stack_icon/fe/zod.svg" },
-        { name: "Eslint", icon: "/dist/assets/tech_stack_icon/fe/eslint.svg" },
+        {
+          name: "Zod",
+          icon: "https://github.com/LuftSoft/bui-ta-tan-ngoc/tree/master/dist/assets/tech_stack_icon/fe/zod.svg",
+        },
+        {
+          name: "Eslint",
+          icon: "https://github.com/LuftSoft/bui-ta-tan-ngoc/tree/master/dist/assets/tech_stack_icon/fe/eslint.svg",
+        },
       ],
     },
     {
@@ -37,22 +49,28 @@ const Skills: React.FC = () => {
       technologies: [
         {
           name: "Express.js",
-          icon: "/dist/assets/tech_stack_icon/be/expressjs.svg",
+          icon: "https://github.com/LuftSoft/bui-ta-tan-ngoc/tree/master/dist/assets/tech_stack_icon/be/expressjs.svg",
         },
         {
           name: "ASP.NET API",
-          icon: "/dist/assets/tech_stack_icon/be/netapi.svg",
+          icon: "https://github.com/LuftSoft/bui-ta-tan-ngoc/tree/master/dist/assets/tech_stack_icon/be/netapi.svg",
         },
         {
           name: "Spring boot",
-          icon: "/dist/assets/tech_stack_icon/be/springboot.svg",
+          icon: "https://github.com/LuftSoft/bui-ta-tan-ngoc/tree/master/dist/assets/tech_stack_icon/be/springboot.svg",
         },
-        { name: "Prisma", icon: "/dist/assets/tech_stack_icon/be/prisma.svg" },
+        {
+          name: "Prisma",
+          icon: "https://github.com/LuftSoft/bui-ta-tan-ngoc/tree/master/dist/assets/tech_stack_icon/be/prisma.svg",
+        },
         {
           name: "REST APIs",
-          icon: "/dist/assets/tech_stack_icon/be/restapi.svg",
+          icon: "https://github.com/LuftSoft/bui-ta-tan-ngoc/tree/master/dist/assets/tech_stack_icon/be/restapi.svg",
         },
-        { name: "JWT", icon: "/dist/assets/tech_stack_icon/be/jwt.svg" },
+        {
+          name: "JWT",
+          icon: "https://github.com/LuftSoft/bui-ta-tan-ngoc/tree/master/dist/assets/tech_stack_icon/be/jwt.svg",
+        },
       ],
     },
     {
@@ -60,13 +78,22 @@ const Skills: React.FC = () => {
       icon: Database,
       color: "from-purple-500 to-pink-500",
       technologies: [
-        { name: "MSSQL", icon: "/dist/assets/tech_stack_icon/db/mysql.svg" },
-        { name: "MySQL", icon: "/dist/assets/tech_stack_icon/db/mysql.svg" },
+        {
+          name: "MSSQL",
+          icon: "https://github.com/LuftSoft/bui-ta-tan-ngoc/tree/master/dist/assets/tech_stack_icon/db/mssql.svg",
+        },
+        {
+          name: "MySQL",
+          icon: "https://github.com/LuftSoft/bui-ta-tan-ngoc/tree/master/dist/assets/tech_stack_icon/db/mysql.svg",
+        },
         {
           name: "MongoDB",
-          icon: "/dist/assets/tech_stack_icon/db/mongodb.svg",
+          icon: "https://github.com/LuftSoft/bui-ta-tan-ngoc/tree/master/dist/assets/tech_stack_icon/db/mongodb.svg",
         },
-        { name: "Redis", icon: "/dist/assets/tech_stack_icon/db/redis.svg" },
+        {
+          name: "Redis",
+          icon: "https://github.com/LuftSoft/bui-ta-tan-ngoc/tree/master/dist/assets/tech_stack_icon/db/redis.svg",
+        },
       ],
     },
     {
@@ -76,7 +103,7 @@ const Skills: React.FC = () => {
       technologies: [
         {
           name: "React Native",
-          icon: "/dist/assets/tech_stack_icon/mobile/react_native.svg",
+          icon: "https://github.com/LuftSoft/bui-ta-tan-ngoc/tree/master/dist/assets/tech_stack_icon/mobile/react_native.svg",
         },
         // { name: "Flutter", icon: "🦋" },
         // { name: "Expo", icon: "⭕" },
@@ -92,11 +119,11 @@ const Skills: React.FC = () => {
       technologies: [
         {
           name: "Docker",
-          icon: "/dist/assets/tech_stack_icon/cicd/docker.svg",
+          icon: "https://github.com/LuftSoft/bui-ta-tan-ngoc/tree/master/dist/assets/tech_stack_icon/cicd/docker.svg",
         },
         {
           name: "GitHub Actions",
-          icon: "/dist/assets/tech_stack_icon/cicd/github_actions.svg",
+          icon: "https://github.com/LuftSoft/bui-ta-tan-ngoc/tree/master/dist/assets/tech_stack_icon/cicd/github_actions.svg",
         },
         // { name: "Linux", icon: "🐧" },
         // { name: "AWS", icon: "☁️" },
@@ -113,16 +140,19 @@ const Skills: React.FC = () => {
       technologies: [
         {
           name: "Figma",
-          icon: "/dist/assets/tech_stack_icon/others/figma.svg",
+          icon: "https://github.com/LuftSoft/bui-ta-tan-ngoc/tree/master/dist/assets/tech_stack_icon/others/figma.svg",
         },
-        { name: "Git", icon: "/dist/assets/tech_stack_icon/others/git.svg" },
+        {
+          name: "Git",
+          icon: "https://github.com/LuftSoft/bui-ta-tan-ngoc/tree/master/dist/assets/tech_stack_icon/others/git.svg",
+        },
         {
           name: "GitHub",
-          icon: "/dist/assets/tech_stack_icon/others/github.svg",
+          icon: "https://github.com/LuftSoft/bui-ta-tan-ngoc/tree/master/dist/assets/tech_stack_icon/others/github.svg",
         },
         {
           name: "Postman",
-          icon: "/dist/assets/tech_stack_icon/others/postman.svg",
+          icon: "https://github.com/LuftSoft/bui-ta-tan-ngoc/tree/master/dist/assets/tech_stack_icon/others/postman.svg",
         },
         // { name: "Adobe XD", icon: "🔷" },
         // { name: "Webpack", icon: "📦" },
