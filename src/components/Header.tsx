@@ -53,7 +53,7 @@ const Header: React.FC = () => {
             onClick={() => scrollToSection("home")}
           >
             <img
-              src="https://github.com/LuftSoft/bui-ta-tan-ngoc/tree/master/dist/assets/code.png"
+              src="https://github.com/LuftSoft/bui-ta-tan-ngoc/blob/master/dist/assets/code.png?raw=true"
               alt="Logo"
               className="h-10 w-auto inline-block"
             />

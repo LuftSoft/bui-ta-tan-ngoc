@@ -25,7 +25,7 @@ const Projects: React.FC = () => {
       description:
         "A website that allows teachers to create quizz exams from questions in school's library. Students can take exams and view results.",
       image:
-        "https://github.com/LuftSoft/bui-ta-tan-ngoc/tree/master/dist/assets/quizz_app.png",
+        "https://github.com/LuftSoft/bui-ta-tan-ngoc/blob/master/dist/assets/quizz_app.png?raw=true",
       technologies: [
         "React",
         "React Native",
@@ -42,7 +42,7 @@ const Projects: React.FC = () => {
       description:
         "A website that allows users to shop online with a mobile-friendly interface. Features include product browsing, cart management, and order processing.",
       image:
-        "https://github.com/LuftSoft/bui-ta-tan-ngoc/tree/master/dist/assets/shop_phone.png",
+        "https://github.com/LuftSoft/bui-ta-tan-ngoc/blob/master/dist/assets/shop_phone.png?raw=true",
       technologies: [
         "Angular",
         "Angular Material",

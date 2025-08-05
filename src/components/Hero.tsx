@@ -48,7 +48,7 @@ const Hero: React.FC = () => {
             </button>
             <a
               className="inline-flex items-center px-8 py-4 border-2 border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 font-medium rounded-lg hover:scale-105 hover:border-blue-600 dark:hover:border-blue-400 hover:text-blue-600 dark:hover:text-blue-400 transition-all duration-200"
-              href="https://github.com/LuftSoft/bui-ta-tan-ngoc/tree/master/dist/assets/resume/CV_Bui_Ta_Tan_Ngoc.pdf"
+              href="https://github.com/LuftSoft/bui-ta-tan-ngoc/blob/master/dist/assets/resume/CV_Bui_Ta_Tan_Ngoc.pdf?raw=true"
               download="CV_Bui_Ta_Tan_Ngoc.pdf"
             >
               <Download size={20} className="mr-2" />
