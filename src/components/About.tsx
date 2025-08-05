@@ -1,12 +1,33 @@
-import React from 'react';
-import { Download, Award, Users, Coffee } from 'lucide-react';
+import { Award, Coffee, Download } from "lucide-react";
+import React from "react";
+import { Constants } from "../utils/const";
 
 const About: React.FC = () => {
+  const now = new Date();
   const stats = [
-    { icon: Award, label: 'Years Experience', value: '5+' },
-    { icon: Users, label: 'Happy Clients', value: '50+' },
-    { icon: Coffee, label: 'Projects Completed', value: '100+' },
+    {
+      icon: Award,
+      value: `${now.getFullYear() - Constants.START_CAREER_YEAR}+`,
+      label: "Years Experience",
+    },
+    { icon: Coffee, value: "5+", label: "Projects Completed" },
   ];
+  const aboutInfo = {
+    name: "Bùi Tá Tân Ngọc",
+    description:
+      "Passionate developer with a love for creating innovative solutions and a commitment to excellence.",
+    objective: "Resolve to create impactful software solutions.",
+    experience: `With about ${
+      now.getFullYear() - Constants.START_CAREER_YEAR
+    } years of experience in developing responsive and
+                high-performance web applications. Proficient in both frontend
+                and backend development, with a solid understanding of RESTful
+                APIs, component-based architecture, and server-side rendering.
+                Passionate about writing clean, maintainable code and
+                continuously improving product quality.`,
+    commited: `I believe in writing clean, maintainable code and creating user
+                experiences that are both functional and delightful.`,
+  };
 
   return (
     <section id="about" className="py-24 bg-gray-50 dark:bg-gray-800">
@@ -16,7 +37,7 @@ const About: React.FC = () => {
             About Me
           </h2>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            Passionate developer with a love for creating exceptional digital experiences
+            {aboutInfo.description}
           </p>
         </div>
 
@@ -24,7 +45,7 @@ const About: React.FC = () => {
           <div>
             <div className="relative">
               <img
-                src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&dpr=2"
+                src="/dist/assets/avatar.jpg"
                 alt="Profile"
                 className="w-full max-w-md mx-auto rounded-2xl shadow-2xl"
               />
@@ -34,23 +55,12 @@ const About: React.FC = () => {
 
           <div>
             <h3 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">
-              Creating Digital Solutions That Matter
+              {aboutInfo.objective}
             </h3>
-            
+
             <div className="space-y-6 text-gray-600 dark:text-gray-300 leading-relaxed">
-              <p>
-                With over 5 years of experience in web development, I specialize in creating 
-                modern, scalable applications using cutting-edge technologies. My journey began 
-                with a passion for problem-solving and has evolved into expertise across the 
-                full development stack.
-              </p>
-              
-              <p>
-                I believe in writing clean, maintainable code and creating user experiences 
-                that are both functional and delightful. When I'm not coding, you can find me 
-                exploring new technologies, contributing to open-source projects, or sharing 
-                knowledge with the developer community.
-              </p>
+              <p className="text-justify">{aboutInfo.experience}</p>
+              <p className="text-justify">{aboutInfo.commited}</p>
             </div>
 
             <div className="grid grid-cols-3 gap-8 my-12">
@@ -68,11 +78,15 @@ const About: React.FC = () => {
                 </div>
               ))}
             </div>
-
-            <button className="inline-flex items-center px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-all duration-200 hover:scale-105 hover:shadow-lg">
+            <div className="my-12"></div>
+            <a
+              className="inline-flex items-center px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-all duration-200 hover:scale-105 hover:shadow-lg"
+              href="/dist/assets/resume/CV_Bui_Ta_Tan_Ngoc.pdf"
+              download="CV_Bui_Ta_Tan_Ngoc.pdf"
+            >
               <Download size={20} className="mr-2" />
               Download Resume
-            </button>
+            </a>
           </div>
         </div>
       </div>

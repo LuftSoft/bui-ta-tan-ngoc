@@ -1,104 +1,133 @@
-import React from 'react';
-import { 
-  Code, 
-  Database, 
-  Smartphone, 
+import {
+  Cloud,
+  Code,
+  Database,
   Globe,
-  Server,
   Palette,
-  GitBranch,
-  Cloud
-} from 'lucide-react';
+  Server,
+  Smartphone,
+} from "lucide-react";
+import React from "react";
 
 const Skills: React.FC = () => {
   const techStack = [
     {
-      category: 'Frontend',
+      category: "Frontend",
       icon: Globe,
-      color: 'from-blue-500 to-cyan-500',
+      color: "from-blue-500 to-cyan-500",
       technologies: [
-        { name: 'React', icon: '⚛️' },
-        { name: 'Next.js', icon: '▲' },
-        { name: 'TypeScript', icon: '📘' },
-        { name: 'JavaScript', icon: '🟨' },
-        { name: 'HTML5', icon: '🌐' },
-        { name: 'CSS3', icon: '🎨' },
-        { name: 'Tailwind CSS', icon: '💨' },
-        { name: 'Vue.js', icon: '💚' },
-      ]
+        { name: "React", icon: "/dist/assets/tech_stack_icon/fe/react.svg" },
+        { name: "Next.js", icon: "/dist/assets/tech_stack_icon/fe/nextjs.svg" },
+        {
+          name: "Angular",
+          icon: "/dist/assets/tech_stack_icon/fe/angular.svg",
+        },
+        {
+          name: "TypeScript",
+          icon: "/dist/assets/tech_stack_icon/fe/typescript.svg",
+        },
+        { name: "Zod", icon: "/dist/assets/tech_stack_icon/fe/zod.svg" },
+        { name: "Eslint", icon: "/dist/assets/tech_stack_icon/fe/eslint.svg" },
+      ],
     },
     {
-      category: 'Backend',
+      category: "Backend",
       icon: Server,
-      color: 'from-green-500 to-emerald-500',
+      color: "from-green-500 to-emerald-500",
       technologies: [
-        { name: 'Node.js', icon: '🟢' },
-        { name: 'Python', icon: '🐍' },
-        { name: 'Express.js', icon: '🚀' },
-        { name: 'FastAPI', icon: '⚡' },
-        { name: 'GraphQL', icon: '🔗' },
-        { name: 'REST APIs', icon: '🔌' },
-        { name: 'Socket.io', icon: '🔄' },
-        { name: 'JWT', icon: '🔐' },
-      ]
+        {
+          name: "Express.js",
+          icon: "/dist/assets/tech_stack_icon/be/expressjs.svg",
+        },
+        {
+          name: "ASP.NET API",
+          icon: "/dist/assets/tech_stack_icon/be/netapi.svg",
+        },
+        {
+          name: "Spring boot",
+          icon: "/dist/assets/tech_stack_icon/be/springboot.svg",
+        },
+        { name: "Prisma", icon: "/dist/assets/tech_stack_icon/be/prisma.svg" },
+        {
+          name: "REST APIs",
+          icon: "/dist/assets/tech_stack_icon/be/restapi.svg",
+        },
+        { name: "JWT", icon: "/dist/assets/tech_stack_icon/be/jwt.svg" },
+      ],
     },
     {
-      category: 'Database',
+      category: "Database",
       icon: Database,
-      color: 'from-purple-500 to-pink-500',
+      color: "from-purple-500 to-pink-500",
       technologies: [
-        { name: 'PostgreSQL', icon: '🐘' },
-        { name: 'MongoDB', icon: '🍃' },
-        { name: 'MySQL', icon: '🐬' },
-        { name: 'Redis', icon: '🔴' },
-        { name: 'Supabase', icon: '⚡' },
-        { name: 'Firebase', icon: '🔥' },
-        { name: 'Prisma', icon: '🔷' },
-        { name: 'SQLite', icon: '📦' },
-      ]
+        { name: "MSSQL", icon: "/dist/assets/tech_stack_icon/db/mysql.svg" },
+        { name: "MySQL", icon: "/dist/assets/tech_stack_icon/db/mysql.svg" },
+        {
+          name: "MongoDB",
+          icon: "/dist/assets/tech_stack_icon/db/mongodb.svg",
+        },
+        { name: "Redis", icon: "/dist/assets/tech_stack_icon/db/redis.svg" },
+      ],
     },
     {
-      category: 'Mobile',
+      category: "Mobile",
       icon: Smartphone,
-      color: 'from-orange-500 to-red-500',
+      color: "from-orange-500 to-red-500",
       technologies: [
-        { name: 'React Native', icon: '📱' },
-        { name: 'Flutter', icon: '🦋' },
-        { name: 'Expo', icon: '⭕' },
-        { name: 'iOS', icon: '🍎' },
-        { name: 'Android', icon: '🤖' },
-        { name: 'PWA', icon: '📲' },
-      ]
+        {
+          name: "React Native",
+          icon: "/dist/assets/tech_stack_icon/mobile/react_native.svg",
+        },
+        // { name: "Flutter", icon: "🦋" },
+        // { name: "Expo", icon: "⭕" },
+        // { name: "iOS", icon: "🍎" },
+        // { name: "Android", icon: "🤖" },
+        // { name: "PWA", icon: "📲" },
+      ],
     },
     {
-      category: 'DevOps & Tools',
+      category: "DevOps & Tools",
       icon: Cloud,
-      color: 'from-indigo-500 to-blue-500',
+      color: "from-indigo-500 to-blue-500",
       technologies: [
-        { name: 'Docker', icon: '🐳' },
-        { name: 'AWS', icon: '☁️' },
-        { name: 'Vercel', icon: '▲' },
-        { name: 'Netlify', icon: '🌐' },
-        { name: 'GitHub Actions', icon: '⚙️' },
-        { name: 'Linux', icon: '🐧' },
-        { name: 'Nginx', icon: '🔧' },
-        { name: 'Kubernetes', icon: '☸️' },
-      ]
+        {
+          name: "Docker",
+          icon: "/dist/assets/tech_stack_icon/cicd/docker.svg",
+        },
+        {
+          name: "GitHub Actions",
+          icon: "/dist/assets/tech_stack_icon/cicd/github_actions.svg",
+        },
+        // { name: "Linux", icon: "🐧" },
+        // { name: "AWS", icon: "☁️" },
+        // { name: "Vercel", icon: "▲" },
+        // { name: "Netlify", icon: "🌐" },
+        // { name: "Nginx", icon: "🔧" },
+        // { name: "Kubernetes", icon: "☸️" },
+      ],
     },
     {
-      category: 'Design & Others',
+      category: "Design & Others",
       icon: Palette,
-      color: 'from-pink-500 to-rose-500',
+      color: "from-pink-500 to-rose-500",
       technologies: [
-        { name: 'Figma', icon: '🎨' },
-        { name: 'Adobe XD', icon: '🔷' },
-        { name: 'Git', icon: '📝' },
-        { name: 'GitHub', icon: '🐙' },
-        { name: 'VS Code', icon: '💙' },
-        { name: 'Postman', icon: '📮' },
-        { name: 'Webpack', icon: '📦' },
-        { name: 'Vite', icon: '⚡' },
-      ]
+        {
+          name: "Figma",
+          icon: "/dist/assets/tech_stack_icon/others/figma.svg",
+        },
+        { name: "Git", icon: "/dist/assets/tech_stack_icon/others/git.svg" },
+        {
+          name: "GitHub",
+          icon: "/dist/assets/tech_stack_icon/others/github.svg",
+        },
+        {
+          name: "Postman",
+          icon: "/dist/assets/tech_stack_icon/others/postman.svg",
+        },
+        // { name: "Adobe XD", icon: "🔷" },
+        // { name: "Webpack", icon: "📦" },
+        // { name: "Vite", icon: "⚡" },
+      ],
     },
   ];
 
@@ -121,21 +150,27 @@ const Skills: React.FC = () => {
               className="bg-gray-50 dark:bg-gray-800 rounded-2xl p-8 hover:shadow-lg transition-all duration-300 hover:scale-105"
             >
               <div className="flex items-center mb-6">
-                <div className={`inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r ${category.color} text-white rounded-xl mr-4`}>
+                <div
+                  className={`inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r ${category.color} text-white rounded-xl mr-4`}
+                >
                   <category.icon size={24} />
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 dark:text-white">
                   {category.category}
                 </h3>
               </div>
-              
+
               <div className="grid grid-cols-2 gap-3">
                 {category.technologies.map((tech, techIndex) => (
                   <div
                     key={techIndex}
                     className="flex items-center p-3 bg-white dark:bg-gray-700 rounded-lg hover:shadow-md transition-all duration-200 hover:scale-105"
                   >
-                    <span className="text-2xl mr-3">{tech.icon}</span>
+                    <img
+                      src={tech.icon}
+                      alt="tech_icon"
+                      className="w-8 ratio-1/1 mr-3"
+                    />
                     <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
                       {tech.name}
                     </span>
@@ -149,7 +184,9 @@ const Skills: React.FC = () => {
         <div className="mt-16 text-center">
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-full">
             <Code size={20} className="mr-2" />
-            <span className="font-medium">Always learning new technologies</span>
+            <span className="font-medium">
+              Always learning new technologies
+            </span>
           </div>
         </div>
       </div>

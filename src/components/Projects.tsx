@@ -1,55 +1,57 @@
-import React from 'react';
-import { ExternalLink, Github, Eye } from 'lucide-react';
+import React from "react";
+import { ExternalLink, Github, Eye } from "lucide-react";
 
 const Projects: React.FC = () => {
   const projects = [
     {
-      title: 'E-Commerce Platform',
-      description: 'A full-stack e-commerce solution with React, Node.js, and Stripe integration. Features include user authentication, product management, and secure payment processing.',
-      image: 'https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&w=600',
-      technologies: ['React', 'Node.js', 'MongoDB', 'Stripe'],
-      liveUrl: '#',
-      githubUrl: '#',
+      title: "Shop Shoes",
+      description:
+        "A e-commerce solution with Node.js,Express.js and ejs. Features include user authentication, product management, dashboard for admin to manage the products.",
+      image:
+        "https://github.com/LuftSoft/QLWEBBH/blob/main/public/img/slider-img/mau-anh-1.jpg?raw=true",
+      technologies: [
+        "Node.js",
+        "Express.js",
+        "Ejs",
+        "Bootstrap",
+        "JQuery",
+        "Microsoft SQL Server",
+      ],
+      liveUrl: "https://github.com/LuftSoft/QLWEBBH/blob/main/README.md",
+      githubUrl: "https://github.com/LuftSoft/QLWEBBH/blob/main/README.md",
     },
     {
-      title: 'Task Management App',
-      description: 'A collaborative project management tool with real-time updates, drag-and-drop functionality, and team collaboration features.',
-      image: 'https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=600',
-      technologies: ['Next.js', 'TypeScript', 'PostgreSQL', 'Socket.io'],
-      liveUrl: '#',
-      githubUrl: '#',
+      title: "Quizz Web App",
+      description:
+        "A website that allows teachers to create quizz exams from questions in school's library. Students can take exams and view results.",
+      image: "/dist/assets/quizz_app.png",
+      technologies: [
+        "React",
+        "React Native",
+        "MaterialUI",
+        "Express.js",
+        "MongoDb",
+        "Sequelize",
+      ],
+      liveUrl: "https://github.com/LuftSoft/do-an-cuoi-khoa/tree/master",
+      githubUrl: "https://github.com/LuftSoft/do-an-cuoi-khoa/tree/master",
     },
     {
-      title: 'Weather Dashboard',
-      description: 'A beautiful weather application with location-based forecasts, interactive maps, and detailed weather analytics.',
-      image: 'https://images.pexels.com/photos/1118873/pexels-photo-1118873.jpeg?auto=compress&cs=tinysrgb&w=600',
-      technologies: ['Vue.js', 'Weather API', 'Chart.js', 'Tailwind'],
-      liveUrl: '#',
-      githubUrl: '#',
-    },
-    {
-      title: 'Social Media Analytics',
-      description: 'A comprehensive analytics dashboard for social media management with data visualization and automated reporting.',
-      image: 'https://images.pexels.com/photos/265087/pexels-photo-265087.jpeg?auto=compress&cs=tinysrgb&w=600',
-      technologies: ['React', 'D3.js', 'Python', 'FastAPI'],
-      liveUrl: '#',
-      githubUrl: '#',
-    },
-    {
-      title: 'Fitness Tracking App',
-      description: 'A mobile-first fitness application with workout tracking, progress visualization, and social sharing capabilities.',
-      image: 'https://images.pexels.com/photos/1552242/pexels-photo-1552242.jpeg?auto=compress&cs=tinysrgb&w=600',
-      technologies: ['React Native', 'Firebase', 'Chart.js', 'Redux'],
-      liveUrl: '#',
-      githubUrl: '#',
-    },
-    {
-      title: 'AI Content Generator',
-      description: 'An AI-powered content creation tool that helps users generate blog posts, social media content, and marketing copy.',
-      image: 'https://images.pexels.com/photos/1181244/pexels-photo-1181244.jpeg?auto=compress&cs=tinysrgb&w=600',
-      technologies: ['Next.js', 'OpenAI API', 'Supabase', 'Tailwind'],
-      liveUrl: '#',
-      githubUrl: '#',
+      title: "Mobile Shopping App",
+      description:
+        "A website that allows users to shop online with a mobile-friendly interface. Features include product browsing, cart management, and order processing.",
+      image: "/dist/assets/shop_phone.png",
+      technologies: [
+        "Angular",
+        "Angular Material",
+        "ASP.NET API",
+        "EF Core",
+        "Microsoft SQL Server",
+      ],
+      liveUrl:
+        "https://github.com/LuftSoft/do-an-thuc-tap/blob/master/README.md",
+      githubUrl:
+        "https://github.com/LuftSoft/do-an-thuc-tap/blob/master/README.md",
     },
   ];
 
@@ -58,10 +60,11 @@ const Projects: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
-            Featured Projects
+            Side Projects
           </h2>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            A showcase of my recent work and creative solutions
+            A showcase of my side projects that i created to enhance my skills
+            and explore new technologies.
           </p>
         </div>
 
@@ -80,28 +83,30 @@ const Projects: React.FC = () => {
                 <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center space-x-4">
                   <a
                     href={project.liveUrl}
+                    target="_blank"
                     className="p-3 bg-white text-gray-900 rounded-full hover:bg-gray-100 transition-colors duration-200"
                   >
                     <Eye size={20} />
                   </a>
                   <a
                     href={project.githubUrl}
+                    target="_blank"
                     className="p-3 bg-white text-gray-900 rounded-full hover:bg-gray-100 transition-colors duration-200"
                   >
                     <Github size={20} />
                   </a>
                 </div>
               </div>
-              
-              <div className="p-8">
+
+              <div className="p-8 flex flex-col">
                 <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
                   {project.title}
                 </h3>
-                
-                <p className="text-gray-600 dark:text-gray-300 mb-4 leading-relaxed">
+
+                <p className="text-gray-600 dark:text-gray-300 mb-4 leading-relaxed min-h-32 overflow-hidden text-ellipsis">
                   {project.description}
                 </p>
-                
+
                 <div className="flex flex-wrap gap-2 mb-6">
                   {project.technologies.map((tech, techIndex) => (
                     <span
@@ -112,10 +117,10 @@ const Projects: React.FC = () => {
                     </span>
                   ))}
                 </div>
-                
                 <div className="flex space-x-4">
                   <a
                     href={project.liveUrl}
+                    target="_blank"
                     className="flex items-center px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors duration-200"
                   >
                     <ExternalLink size={16} className="mr-2" />
@@ -123,6 +128,7 @@ const Projects: React.FC = () => {
                   </a>
                   <a
                     href={project.githubUrl}
+                    target="_blank"
                     className="flex items-center px-4 py-2 border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 hover:border-blue-600 dark:hover:border-blue-400 hover:text-blue-600 dark:hover:text-blue-400 rounded-lg transition-colors duration-200"
                   >
                     <Github size={16} className="mr-2" />
