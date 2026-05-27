@@ -1,30 +1,54 @@
+@import url('https://api.fontshare.com/v2/css?f[]=clash-display@400,500,600,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
+  :root {
+    --color-bg: 250 250 250;
+    --color-fg: 10 10 10;
+    --color-muted: 244 244 245;
+    --color-muted-fg: 113 113 122;
+    --color-border: 228 228 231;
+    --color-card: 255 255 255;
+    --color-accent: 250 204 21;
+    --color-accent-fg: 24 24 27;
+  }
+
+  .dark {
+    --color-bg: 10 10 10;
+    --color-fg: 250 250 250;
+    --color-muted: 24 24 27;
+    --color-muted-fg: 161 161 170;
+    --color-border: 39 39 42;
+    --color-card: 17 17 19;
+    --color-accent: 250 204 21;
+    --color-accent-fg: 24 24 27;
+  }
+
   html {
     scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
-  
+
   body {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+    @apply bg-bg text-fg font-sans;
+    font-feature-settings: 'cv11', 'ss01', 'ss03';
+  }
+
+  ::selection {
+    @apply bg-accent text-accent-fg;
   }
 }
 
 @layer utilities {
-  .animate-fade-in-up {
-    animation: fadeInUp 1s ease-out;
+  .text-balance {
+    text-wrap: balance;
   }
-  
-  @keyframes fadeInUp {
-    from {
-      opacity: 0;
-      transform: translateY(30px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
+  .text-pretty {
+    text-wrap: pretty;
   }
 }

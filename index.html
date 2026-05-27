@@ -1,17 +1,37 @@
 <!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0a0a0a" />
+    <link rel="icon" type="image/png" href="/assets/code.png" />
 
-<head>
-  <meta charset="UTF-8" />
-  <link rel="icon" type="image/x-icon"
-    href="https://raw.githubusercontent.com/LuftSoft/bui-ta-tan-ngoc/refs/heads/master/dist/assets/code.png" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tan Ngoc</title>
-</head>
+    <title>tanngoc.dev — Freelance fullstack developer</title>
+    <meta name="description" content="Tan Ngoc — freelance fullstack developer building fast, polished web products for startups and founders." />
 
-<body>
-  <div id="root"></div>
-  <script type="module" src="/src/main.tsx"></script>
-</body>
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="tanngoc.dev — Freelance fullstack developer" />
+    <meta property="og:description" content="Freelance fullstack developer building fast, polished web products." />
+    <meta property="og:site_name" content="tanngoc.dev" />
 
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="tanngoc.dev" />
+    <meta name="twitter:description" content="Freelance fullstack developer building fast, polished web products." />
+
+    <script>
+      (function () {
+        try {
+          var t = localStorage.getItem('theme');
+          var mq = window.matchMedia('(prefers-color-scheme: dark)');
+          var dark = t === 'dark' || ((!t || t === 'system') && mq.matches);
+          if (dark) document.documentElement.classList.add('dark');
+          document.documentElement.style.colorScheme = dark ? 'dark' : 'light';
+        } catch (_) {}
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
 </html>

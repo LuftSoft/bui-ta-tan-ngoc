@@ -1,0 +1,32 @@
+{
+  "brand": "tanngoc.dev",
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "projects": "Projects",
+    "blog": "Blog",
+    "contact": "Contact"
+  },
+  "cta": {
+    "hireMe": "Hire me",
+    "viewWork": "View my work",
+    "getInTouch": "Get in touch",
+    "readMore": "Read more"
+  },
+  "footer": {
+    "rights": "All rights reserved.",
+    "builtWith": "Built with React, Vite & Tailwind."
+  },
+  "theme": {
+    "light": "Light",
+    "dark": "Dark",
+    "system": "System",
+    "toggle": "Toggle theme"
+  },
+  "language": {
+    "switch": "Switch language",
+    "en": "English",
+    "vi": "Vietnamese"
+  }
+}

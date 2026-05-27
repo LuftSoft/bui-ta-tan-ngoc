@@ -1,0 +1,32 @@
+{
+  "brand": "tanngoc.dev",
+  "nav": {
+    "home": "Trang chủ",
+    "about": "Giới thiệu",
+    "services": "Dịch vụ",
+    "projects": "Dự án",
+    "blog": "Bài viết",
+    "contact": "Liên hệ"
+  },
+  "cta": {
+    "hireMe": "Thuê tôi",
+    "viewWork": "Xem dự án",
+    "getInTouch": "Liên hệ ngay",
+    "readMore": "Xem thêm"
+  },
+  "footer": {
+    "rights": "Đã đăng ký bản quyền.",
+    "builtWith": "Xây dựng với React, Vite & Tailwind."
+  },
+  "theme": {
+    "light": "Sáng",
+    "dark": "Tối",
+    "system": "Hệ thống",
+    "toggle": "Đổi giao diện"
+  },
+  "language": {
+    "switch": "Đổi ngôn ngữ",
+    "en": "Tiếng Anh",
+    "vi": "Tiếng Việt"
+  }
+}
