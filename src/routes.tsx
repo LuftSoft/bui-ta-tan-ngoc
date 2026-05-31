@@ -3,6 +3,7 @@ import { RootLayout } from './components/layout/RootLayout';
 import HomePage from './pages/HomePage';
 import PlaceholderPage from './pages/PlaceholderPage';
 import NotFoundPage from './pages/NotFoundPage';
+import StyleguidePage from './pages/StyleguidePage';
 import { DEFAULT_LOCALE, isLocale } from './lib/i18n';
 
 function LocaleGuard({ children }: { children: React.ReactNode }) {
@@ -31,6 +32,7 @@ export function AppRoutes() {
         <Route path="blog" element={<PlaceholderPage titleKey="nav.blog" />} />
         <Route path="blog/:slug" element={<PlaceholderPage titleKey="nav.blog" />} />
         <Route path="contact" element={<PlaceholderPage titleKey="nav.contact" />} />
+        {import.meta.env.DEV && <Route path="_styleguide" element={<StyleguidePage />} />}
         <Route path="*" element={<NotFoundPage />} />
       </Route>
       <Route path="*" element={<Navigate to={`/${DEFAULT_LOCALE}`} replace />} />
