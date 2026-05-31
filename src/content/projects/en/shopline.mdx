@@ -1,0 +1,34 @@
+---
+title: "Shopline"
+slug: "shopline"
+excerpt: "E-commerce dashboard rebuild that doubled load speed and cleaned up the data model."
+cover: "/assets/shop_phone.png"
+tags: ["React", "Node", "Postgres"]
+client: "Shopline"
+year: 2024
+role: "Fullstack Developer"
+stack: ["React", "Node.js", "Postgres", "Prisma", "Docker"]
+featured: true
+publishedAt: "2024-11-02"
+---
+
+## The challenge
+
+Shopline's admin dashboard had grown into a 6-second-to-paint Angular monolith with three competing data sources. Sellers were waiting on every page click.
+
+## What I built
+
+- New React + Vite shell, route-based code splitting, edge caching for read-mostly views
+- Consolidated three legacy APIs behind one typed GraphQL gateway in Node
+- Migrated the orders schema to Postgres with proper indexes and a soft-delete flag
+- Set up Docker Compose dev environment so onboarding new contractors took **15 minutes**, not a day
+
+## Results
+
+- Largest Contentful Paint dropped from **6.1 s → 1.8 s** on the dashboard home
+- Sellers shipped 22% more orders/day in the month after launch (per their analytics)
+- Eliminated 2 of 3 background sync jobs that had been failing silently for months
+
+## What I'd do next
+
+Move the GraphQL gateway to Hono on Cloudflare Workers — most queries are now under 50 ms server time and an edge runtime would cut the round trip from Asia by another 100+ ms.

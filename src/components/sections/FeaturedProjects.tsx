@@ -1,3 +1,4 @@
+import { useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { ArrowUpRight } from 'lucide-react';
@@ -6,29 +7,17 @@ import { Eyebrow } from '../ui/Eyebrow';
 import { Tag } from '../ui/Tag';
 import { Reveal } from '../motion/Reveal';
 import { useLocale, localePath } from '../../hooks/useLocale';
-
-const FEATURED = [
-  {
-    slug: 'quizzle',
-    title: 'Quizzle',
-    summary: 'Real-time quiz platform for classrooms — built MVP to launch in 5 weeks.',
-    cover: '/assets/quizz_app.png',
-    tags: ['Next.js', 'Supabase', 'Realtime'],
-    year: 2025,
-  },
-  {
-    slug: 'shopline',
-    title: 'Shopline',
-    summary: 'E-commerce dashboard rebuild that doubled load speed and cleaned up the data model.',
-    cover: '/assets/shop_phone.png',
-    tags: ['React', 'Node', 'Postgres'],
-    year: 2024,
-  },
-];
+import { listProjects } from '../../lib/mdx';
 
 export function FeaturedProjects() {
   const { t } = useTranslation('home');
   const locale = useLocale();
+  const featured = useMemo(
+    () => listProjects(locale).filter((p) => p.frontmatter.featured).slice(0, 2),
+    [locale],
+  );
+
+  if (featured.length === 0) return null;
 
   return (
     <Section spacing="lg" id="projects">
@@ -53,7 +42,7 @@ export function FeaturedProjects() {
       </div>
 
       <div className="mt-12 grid gap-6 md:grid-cols-2">
-        {FEATURED.map((p, i) => (
+        {featured.map((p, i) => (
           <Reveal key={p.slug} delay={i * 0.1} className="h-full">
             <Link
               to={localePath(locale, `projects/${p.slug}`)}
@@ -61,8 +50,8 @@ export function FeaturedProjects() {
             >
               <div className="relative aspect-[16/10] overflow-hidden bg-muted">
                 <img
-                  src={p.cover}
-                  alt={p.title}
+                  src={p.frontmatter.cover}
+                  alt={p.frontmatter.title}
                   loading="lazy"
                   className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
@@ -72,14 +61,14 @@ export function FeaturedProjects() {
               </div>
               <div className="flex flex-1 flex-col gap-3 p-6">
                 <div className="flex items-center gap-3 text-xs uppercase tracking-wider text-muted-fg">
-                  <span>{p.year}</span>
+                  <span>{p.frontmatter.year}</span>
                   <span aria-hidden>·</span>
-                  <span>{p.tags.join(' / ')}</span>
+                  <span>{p.frontmatter.tags.join(' / ')}</span>
                 </div>
-                <h3 className="font-display text-2xl font-semibold">{p.title}</h3>
-                <p className="text-muted-fg text-pretty">{p.summary}</p>
+                <h3 className="font-display text-2xl font-semibold">{p.frontmatter.title}</h3>
+                <p className="text-muted-fg text-pretty">{p.frontmatter.excerpt}</p>
                 <div className="mt-auto flex flex-wrap gap-2 pt-3">
-                  {p.tags.map((tag) => (
+                  {p.frontmatter.tags.map((tag) => (
                     <Tag key={tag} variant="outline">
                       {tag}
                     </Tag>

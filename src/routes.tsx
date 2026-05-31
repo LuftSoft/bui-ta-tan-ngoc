@@ -4,6 +4,8 @@ import HomePage from './pages/HomePage';
 import PlaceholderPage from './pages/PlaceholderPage';
 import NotFoundPage from './pages/NotFoundPage';
 import StyleguidePage from './pages/StyleguidePage';
+import ProjectsPage from './pages/ProjectsPage';
+import ProjectDetailPage from './pages/ProjectDetailPage';
 import { DEFAULT_LOCALE, isLocale } from './lib/i18n';
 
 function LocaleGuard({ children }: { children: React.ReactNode }) {
@@ -27,8 +29,8 @@ export function AppRoutes() {
         <Route index element={<HomePage />} />
         <Route path="about" element={<PlaceholderPage titleKey="nav.about" />} />
         <Route path="services" element={<PlaceholderPage titleKey="nav.services" />} />
-        <Route path="projects" element={<PlaceholderPage titleKey="nav.projects" />} />
-        <Route path="projects/:slug" element={<PlaceholderPage titleKey="nav.projects" />} />
+        <Route path="projects" element={<ProjectsPage />} />
+        <Route path="projects/:slug" element={<ProjectDetailPage />} />
         <Route path="blog" element={<PlaceholderPage titleKey="nav.blog" />} />
         <Route path="blog/:slug" element={<PlaceholderPage titleKey="nav.blog" />} />
         <Route path="contact" element={<PlaceholderPage titleKey="nav.contact" />} />

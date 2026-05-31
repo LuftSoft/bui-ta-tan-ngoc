@@ -1,0 +1,33 @@
+---
+title: "Tortuga"
+slug: "tortuga"
+excerpt: "Rebuild booking flow mobile-first cho một agency du lịch biển."
+cover: "/assets/quizz_app.png"
+tags: ["React Native", "Stripe", "Mobile"]
+client: "Tortuga Tours"
+year: 2024
+role: "Mobile Developer"
+stack: ["React Native", "Expo", "Stripe", "Sentry"]
+publishedAt: "2024-06-10"
+---
+
+## Bài toán
+
+Tỷ lệ chốt booking trên mobile của Tortuga chưa bằng một nửa desktop. App cũ là WebView wrapper 4 năm tuổi, mở chậm và cảm giác xa lạ.
+
+## Mình đã build
+
+- App React Native native, dùng chung design token với web
+- Tích hợp Stripe Payment Sheet — Apple Pay / Google Pay one-tap checkout
+- Offline-first cho view lịch trình bằng SQLite + sync, để thợ lặn trên thuyền vẫn đọc được kế hoạch hôm sau
+- Sentry + dashboard analytics riêng cho email metrics hàng tuần của founder
+
+## Kết quả
+
+- Tỷ lệ hoàn tất checkout mobile từ **31% → 58%** trong 6 tuần
+- Rating App Store leo từ **3.4 → 4.7** sau khi rewrite
+- Ticket support kiểu "không book được" gần như bằng 0
+
+## Bước tiếp
+
+Thêm onboarding tutorial cho thợ lặn lần đầu — drop-off giờ chủ yếu ở bước chọn đồ lặn, không phải payment.

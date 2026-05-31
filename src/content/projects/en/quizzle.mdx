@@ -1,0 +1,40 @@
+---
+title: "Quizzle"
+slug: "quizzle"
+excerpt: "Real-time quiz platform for classrooms — MVP to launch in five weeks."
+cover: "/assets/quizz_app.png"
+tags: ["Next.js", "Supabase", "Realtime"]
+client: "Quizzle Inc."
+year: 2025
+role: "Fullstack Developer & Tech Lead"
+stack: ["Next.js", "TypeScript", "Supabase", "Tailwind", "Vercel"]
+liveUrl: "https://quizzle.example.com"
+featured: true
+publishedAt: "2025-03-15"
+---
+
+## The challenge
+
+The founders had two months before their first big school pilot. They needed a working real-time quiz product — host view, student view, leaderboard, all on shaky classroom Wi-Fi.
+
+<Callout>
+  **Tight timeline.** 5 weeks from kickoff to a working pilot, on a single-developer budget.
+</Callout>
+
+## What I built
+
+- A host dashboard that runs live games with timer, skip and reveal controls
+- Student view that joins by code, works on a 3-year-old Chromebook
+- Realtime synchronization via Supabase Realtime channels — no custom WebSocket server
+- Postgres schema with row-level security so each classroom only sees its own data
+- One-tap CSV import for question banks so teachers could move from Kahoot in minutes
+
+## Results
+
+- Pilot ran in 14 classrooms with **zero downtime** across 200+ live games
+- Average sync lag under **180 ms** even on classroom Wi-Fi
+- Founders raised their pre-seed three weeks after launch using the live demo
+
+## What I'd do next
+
+Move score history off Realtime into a dedicated `game_events` table for analytics, and add a teacher-only "spectate" mode for principals.
