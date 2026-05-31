@@ -4,6 +4,89 @@
     "title": "Xây dựng sản phẩm web nhanh, chỉn chu.",
     "subtitle": "Mình là Tân Ngọc. Thiết kế và phát triển web app end-to-end cho startup và nhà sáng lập trân trọng chất lượng.",
     "primaryCta": "Bắt đầu dự án",
-    "secondaryCta": "Xem dự án"
+    "secondaryCta": "Xem dự án",
+    "availability": "Đang nhận dự án mới · Tháng 6 / 2026"
+  },
+  "trust": {
+    "label": "Công cụ mình dùng hằng ngày"
+  },
+  "services": {
+    "eyebrow": "Dịch vụ",
+    "title": "Mình có thể làm gì cho bạn",
+    "subtitle": "Từ ý tưởng tới ngày launch — hoặc chỉ phần bạn cần hỗ trợ.",
+    "items": {
+      "web": {
+        "title": "Web application",
+        "description": "Fullstack web app với React, TypeScript và database — sẵn sàng ship và sẵn sàng scale."
+      },
+      "mobile": {
+        "title": "Mobile app",
+        "description": "Đa nền tảng iOS và Android với React Native, chia sẻ logic với web."
+      },
+      "consulting": {
+        "title": "Tư vấn & Audit",
+        "description": "Code review, định hướng kiến trúc, audit performance — engagement ngắn, tạo khác biệt rõ."
+      },
+      "mvp": {
+        "title": "MVP Sprint",
+        "description": "Sprint 2–6 tuần dành cho founder, biến ý tưởng thành sản phẩm thật để show user."
+      }
+    }
+  },
+  "projects": {
+    "eyebrow": "Dự án nổi bật",
+    "title": "Dự án gần đây",
+    "viewAll": "Xem tất cả dự án"
+  },
+  "process": {
+    "eyebrow": "Quy trình",
+    "title": "Cách mình làm việc",
+    "subtitle": "Nhịp làm việc rõ ràng để bạn luôn biết tuần này có gì.",
+    "steps": {
+      "discover": {
+        "title": "Khám phá",
+        "description": "Cùng nhau làm rõ vấn đề, người dùng và ràng buộc. Bạn nhận brief viết tay trước khi code."
+      },
+      "design": {
+        "title": "Thiết kế",
+        "description": "Wireframe và hướng visual chung — thống nhất giao diện trước khi build."
+      },
+      "build": {
+        "title": "Phát triển",
+        "description": "Release hằng tuần trên staging URL. Bạn thấy tiến độ mỗi thứ Sáu."
+      },
+      "launch": {
+        "title": "Launch",
+        "description": "Deploy production, tài liệu bàn giao, kèm 30 ngày hỗ trợ sau launch."
+      }
+    }
+  },
+  "testimonials": {
+    "eyebrow": "Phản hồi",
+    "title": "Từ những người mình đã hợp tác",
+    "items": {
+      "one": {
+        "quote": "Tân Ngọc ship MVP cho team mình trong 5 tuần — code sạch và giao diện cuối cùng đã đúng cảm giác sản phẩm.",
+        "name": "Linh Phạm",
+        "role": "Founder, Quizzle"
+      },
+      "two": {
+        "quote": "Phản hồi nhanh, chu đáo, ám ảnh với chi tiết. Dashboard bạn ấy build lại chạy nhanh gấp đôi.",
+        "name": "Marc Dubois",
+        "role": "CTO, Shopline"
+      },
+      "three": {
+        "quote": "Hợp tác rất thoải mái. Hỏi đúng câu hỏi quan trọng trước khi viết dòng code đầu tiên.",
+        "name": "An Nguyễn",
+        "role": "Product Lead, Tortuga"
+      }
+    }
+  },
+  "cta": {
+    "eyebrow": "Cùng xây",
+    "title": "Có ý tưởng trong đầu?",
+    "subtitle": "Kể mình nghe về dự án — mình đọc từng tin nhắn và phản hồi trong vòng 24 giờ.",
+    "primary": "Bắt đầu dự án",
+    "secondary": "tanngoc.dev@gmail.com"
   }
 }
