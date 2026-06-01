@@ -1,0 +1,92 @@
+---
+title: "Smooth scroll trong React không phải đánh đổi"
+slug: "lenis-with-react"
+excerpt: "Cách wire Lenis vào React app — desktop cảm giác premium, vẫn tôn trọng tuỳ chọn accessibility."
+tags: ["React", "Animation", "Accessibility"]
+publishedAt: "2026-02-28"
+---
+
+## Vấn đề
+
+Smooth scroll — kiểu bạn thấy trên awwwards.com — trước đây phải lôi cả vườn thú: GSAP, ScrollTrigger, một wrapper virtual scroll nào đó, và rất nhiều chiến đấu với layout. [Lenis](https://lenis.darkroom.engineering/) gom hết thành một dependency nhỏ, hợp với React.
+
+Nhưng nó có cạnh sắc. Đây là cách mình wire mà không hối hận.
+
+## Cách sai
+
+Bạn import Lenis ở đầu `App.tsx`, `new Lenis()`, rồi ship. Sau đó user dùng screen reader mở site, cuộn cảm giác như xi-rô, mọi anchor link đánh nhau với smooth scroll, và iframe embed kẹt cứng.
+
+## Hình dạng đúng
+
+Ba quy tắc, theo thứ tự ưu tiên:
+
+1. Tôn trọng `prefers-reduced-motion`. **Luôn luôn**. Đừng cả instantiate Lenis nếu user đã tắt.
+2. Tear down khi unmount. Vòng lặp RAF sẽ chạy mãi — không sao trong SPA, nhưng chết với route-split bundle.
+3. Đừng đánh nhau với anchor native. Lenis tự xử lý; đừng tự thêm smooth scroll lên trên.
+
+```tsx
+import { useEffect } from 'react';
+import Lenis from 'lenis';
+import { useReducedMotion } from './useReducedMotion';
+
+export function SmoothScrollProvider({ children }) {
+  const reduced = useReducedMotion();
+
+  useEffect(() => {
+    if (reduced) return;
+    const lenis = new Lenis({ duration: 1.1, smoothWheel: true });
+    let rafId = 0;
+    const raf = (time) => {
+      lenis.raf(time);
+      rafId = requestAnimationFrame(raf);
+    };
+    rafId = requestAnimationFrame(raf);
+    return () => {
+      cancelAnimationFrame(rafId);
+      lenis.destroy();
+    };
+  }, [reduced]);
+
+  return children;
+}
+```
+
+## Hook cho `prefers-reduced-motion`
+
+Đừng check một lần. User có thể đổi cài đặt OS trong khi tab của bạn vẫn mở.
+
+```ts
+export function useReducedMotion() {
+  const [reduced, setReduced] = useState(
+    () => window.matchMedia('(prefers-reduced-motion: reduce)').matches,
+  );
+  useEffect(() => {
+    const mq = window.matchMedia('(prefers-reduced-motion: reduce)');
+    const handler = (e) => setReduced(e.matches);
+    mq.addEventListener('change', handler);
+    return () => mq.removeEventListener('change', handler);
+  }, []);
+  return reduced;
+}
+```
+
+<Callout variant="warning">
+  Đừng đặt Lenis trong `<StrictMode>` mà không có cleanup. Strict mode mount rồi unmount ngay
+  trong dev — thiếu `lenis.destroy()` thì sẽ có hai instance đánh nhau giành wheel.
+</Callout>
+
+## Bonus: opt-out cho element cụ thể
+
+Cho data table hoặc image carousel nơi momentum scroll hại hơn lợi:
+
+```tsx
+<div data-lenis-prevent className="overflow-auto">
+  ...
+</div>
+```
+
+Lenis tôn trọng attribute này sẵn.
+
+## Khi nào không nên dùng
+
+Nếu site bạn chủ yếu mobile-first và animation hero chạy ổn không cần nó, bỏ qua Lenis. Đây là lớp polish cho desktop — đẹp, nhưng tuỳ chọn.

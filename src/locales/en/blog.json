@@ -1,0 +1,20 @@
+{
+  "eyebrow": "Notes",
+  "title": "Blog",
+  "subtitle": "Short essays on shipping web products, freelance practice and the tools I use.",
+  "filter": {
+    "all": "All",
+    "label": "Filter by"
+  },
+  "empty": "No posts match that filter yet.",
+  "minRead": "{{count}} min read",
+  "detail": {
+    "back": "Back to blog",
+    "toc": "On this page",
+    "shareLabel": "Share",
+    "copyLink": "Copy link",
+    "linkCopied": "Link copied",
+    "prev": "Previous",
+    "next": "Next"
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "hero": {
+    "eyebrow": "Contact",
+    "title": "Tell me about your project.",
+    "subtitle": "Fill this out and I'll reply within 24 hours. The more context, the better the first reply."
+  },
+  "sidebar": {
+    "email": "Direct email",
+    "responseTime": "Reply within 24h",
+    "location": "Based in Vietnam · working worldwide"
+  },
+  "form": {
+    "name": "Your name",
+    "namePlaceholder": "Jane Doe",
+    "email": "Email",
+    "emailPlaceholder": "jane@company.com",
+    "projectType": "Project type",
+    "projectTypeOptions": {
+      "web": "Web application",
+      "mobile": "Mobile app",
+      "mvp": "MVP sprint",
+      "consulting": "Consulting / audit",
+      "other": "Something else"
+    },
+    "budget": "Budget",
+    "budgetOptions": {
+      "under_5k": "Under $5k",
+      "5_10k": "$5k — $10k",
+      "10_25k": "$10k — $25k",
+      "25k_plus": "$25k+",
+      "not_sure": "Not sure yet"
+    },
+    "timeline": "Timeline",
+    "timelineOptions": {
+      "asap": "ASAP",
+      "1_3m": "In the next 1 — 3 months",
+      "3_6m": "In 3 — 6 months",
+      "exploring": "Just exploring"
+    },
+    "message": "About the project",
+    "messagePlaceholder": "What are you building, what's the problem, who's it for?",
+    "submit": "Send inquiry",
+    "submitting": "Sending…",
+    "errors": {
+      "name": "Please enter your name.",
+      "email": "Please enter a valid email.",
+      "projectType": "Pick a project type.",
+      "message": "Tell me a little about the project (10+ characters).",
+      "generic": "Something went wrong. Try emailing me directly instead."
+    }
+  },
+  "success": {
+    "title": "Message sent — talk soon.",
+    "body": "I'll reply within 24 hours. If you don't see anything by then, check spam or email me directly.",
+    "sendAnother": "Send another"
+  }
+}

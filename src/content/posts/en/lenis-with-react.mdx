@@ -1,0 +1,92 @@
+---
+title: "Smooth scroll in React without the trade-offs"
+slug: "lenis-with-react"
+excerpt: "Wiring Lenis into a React app so it feels premium on desktop and respects accessibility preferences."
+tags: ["React", "Animation", "Accessibility"]
+publishedAt: "2026-02-28"
+---
+
+## The pitch
+
+Smooth scrolling — the kind you see on awwwards.com — used to require a small library zoo: GSAP, ScrollTrigger, some virtual scroll wrapper, and a lot of fighting with layout. [Lenis](https://lenis.darkroom.engineering/) collapses that into one small dependency that plays nicely with React.
+
+But it does have sharp edges. Here's how I wire it up without regret.
+
+## The wrong way
+
+You import Lenis at the top of `App.tsx`, `new Lenis()`, and ship. Then a screen reader user opens your site and the scroll feels like syrup, every anchor link fights with the smooth scroll, and your iframe embeds are stuck in place.
+
+## The right shape
+
+Three rules, in order of importance:
+
+1. Respect `prefers-reduced-motion`. **Always**. Do not even instantiate Lenis if the user opted out.
+2. Tear down on unmount. The RAF loop will keep running otherwise — fine in a SPA, fatal in a route-split bundle.
+3. Don't fight native anchors. Lenis intercepts them for you; don't add your own smooth scroll on top.
+
+```tsx
+import { useEffect } from 'react';
+import Lenis from 'lenis';
+import { useReducedMotion } from './useReducedMotion';
+
+export function SmoothScrollProvider({ children }) {
+  const reduced = useReducedMotion();
+
+  useEffect(() => {
+    if (reduced) return;
+    const lenis = new Lenis({ duration: 1.1, smoothWheel: true });
+    let rafId = 0;
+    const raf = (time) => {
+      lenis.raf(time);
+      rafId = requestAnimationFrame(raf);
+    };
+    rafId = requestAnimationFrame(raf);
+    return () => {
+      cancelAnimationFrame(rafId);
+      lenis.destroy();
+    };
+  }, [reduced]);
+
+  return children;
+}
+```
+
+## The hook for `prefers-reduced-motion`
+
+Don't just check it once. Users can toggle the OS setting while your tab is open.
+
+```ts
+export function useReducedMotion() {
+  const [reduced, setReduced] = useState(
+    () => window.matchMedia('(prefers-reduced-motion: reduce)').matches,
+  );
+  useEffect(() => {
+    const mq = window.matchMedia('(prefers-reduced-motion: reduce)');
+    const handler = (e) => setReduced(e.matches);
+    mq.addEventListener('change', handler);
+    return () => mq.removeEventListener('change', handler);
+  }, []);
+  return reduced;
+}
+```
+
+<Callout variant="warning">
+  Don't put Lenis inside `<StrictMode>` without a cleanup. Strict mode mounts then unmounts in
+  development — without `lenis.destroy()` you'll have two instances fighting over the wheel.
+</Callout>
+
+## Bonus: opt-out per element
+
+For data tables and image carousels where momentum scrolling hurts more than it helps:
+
+```tsx
+<div data-lenis-prevent className="overflow-auto">
+  ...
+</div>
+```
+
+Lenis honors that attribute out of the box.
+
+## When not to use it
+
+If your site is primarily mobile-first and your hero animation works fine without it, skip Lenis. It's a desktop polish layer — beautiful, but optional.
