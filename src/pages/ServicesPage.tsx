@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { ArrowRight, Check, Code2, Smartphone, Sparkles, Wrench } from 'lucide-react';
 import type { LucideIcon } from 'lucide-react';
+import { Seo } from '../components/Seo';
 import { Section } from '../components/ui/Section';
 import { Eyebrow } from '../components/ui/Eyebrow';
 import { Button } from '../components/ui/Button';
@@ -38,11 +39,13 @@ const SERVICES: { key: string; Icon: LucideIcon }[] = [
 
 export default function ServicesPage() {
   const { t } = useTranslation('services');
+  const { t: tc } = useTranslation();
   const locale = useLocale();
   const faq = t('faq.items', { returnObjects: true }) as FaqItem[];
 
   return (
     <>
+      <Seo title={tc('seo.services.title')} description={tc('seo.services.description')} />
       <Section spacing="lg">
         <div className="max-w-3xl">
           <Reveal>

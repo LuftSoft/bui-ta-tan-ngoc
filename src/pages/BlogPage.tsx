@@ -2,6 +2,7 @@ import { useMemo, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { ArrowUpRight, Clock } from 'lucide-react';
+import { Seo } from '../components/Seo';
 import { Section } from '../components/ui/Section';
 import { Eyebrow } from '../components/ui/Eyebrow';
 import { Tag } from '../components/ui/Tag';
@@ -13,6 +14,7 @@ import { cn } from '../lib/cn';
 export default function BlogPage() {
   const locale = useLocale();
   const { t, i18n } = useTranslation('blog');
+  const { t: tc } = useTranslation();
   const [activeTag, setActiveTag] = useState<string | null>(null);
 
   const posts = useMemo(() => listPosts(locale), [locale]);
@@ -32,6 +34,7 @@ export default function BlogPage() {
 
   return (
     <>
+      <Seo title={tc('seo.blog.title')} description={tc('seo.blog.description')} />
       <Section spacing="lg">
         <Reveal>
           <Eyebrow>{t('eyebrow')}</Eyebrow>

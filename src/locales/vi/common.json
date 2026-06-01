@@ -1,5 +1,35 @@
 {
   "brand": "tanngoc.dev",
+  "seo": {
+    "home": {
+      "title": "tanngoc.dev — Freelance Fullstack Developer",
+      "description": "Tân Ngọc — freelance fullstack developer xây dựng sản phẩm web nhanh, chỉn chu cho startup và nhà sáng lập."
+    },
+    "about": {
+      "title": "Giới thiệu",
+      "description": "Về Tân Ngọc — freelance fullstack developer tại Việt Nam, sáu năm ship sản phẩm web."
+    },
+    "services": {
+      "title": "Dịch vụ",
+      "description": "Web app, mobile app, MVP sprint và tư vấn — các hình thức hợp tác cho startup và team nhỏ."
+    },
+    "projects": {
+      "title": "Dự án",
+      "description": "Dự án freelance chọn lọc — case study các sản phẩm web và mobile gần đây."
+    },
+    "blog": {
+      "title": "Bài viết",
+      "description": "Những bài ngắn về ship sản phẩm web, đời freelance và công cụ mình dùng."
+    },
+    "contact": {
+      "title": "Liên hệ",
+      "description": "Bắt đầu cuộc trò chuyện về dự án — mình phản hồi mỗi inquiry trong 24 giờ."
+    },
+    "notFound": {
+      "title": "Không tìm thấy trang",
+      "description": "Trang bạn tìm không tồn tại."
+    }
+  },
   "nav": {
     "home": "Trang chủ",
     "about": "Giới thiệu",
@@ -28,5 +58,8 @@
     "switch": "Đổi ngôn ngữ",
     "en": "Tiếng Anh",
     "vi": "Tiếng Việt"
+  },
+  "a11y": {
+    "skipToContent": "Tới nội dung chính"
   }
 }

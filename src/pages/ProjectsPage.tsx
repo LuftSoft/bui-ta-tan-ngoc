@@ -2,6 +2,7 @@ import { useMemo, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { ArrowUpRight } from 'lucide-react';
+import { Seo } from '../components/Seo';
 import { Section } from '../components/ui/Section';
 import { Eyebrow } from '../components/ui/Eyebrow';
 import { Tag } from '../components/ui/Tag';
@@ -13,6 +14,7 @@ import { cn } from '../lib/cn';
 export default function ProjectsPage() {
   const locale = useLocale();
   const { t } = useTranslation('projects');
+  const { t: tc } = useTranslation();
   const [activeTag, setActiveTag] = useState<string | null>(null);
 
   const projects = useMemo(() => listProjects(locale), [locale]);
@@ -24,6 +26,7 @@ export default function ProjectsPage() {
 
   return (
     <>
+      <Seo title={tc('seo.projects.title')} description={tc('seo.projects.description')} />
       <Section spacing="lg">
         <Reveal>
           <Eyebrow>{t('eyebrow')}</Eyebrow>

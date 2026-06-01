@@ -1,4 +1,5 @@
 import { useTranslation } from 'react-i18next';
+import { Seo } from '../components/Seo';
 import { Section } from '../components/ui/Section';
 import { Eyebrow } from '../components/ui/Eyebrow';
 import { Tag } from '../components/ui/Tag';
@@ -22,6 +23,7 @@ interface ValueItem {
 
 export default function AboutPage() {
   const { t } = useTranslation('about');
+  const { t: tc } = useTranslation();
 
   const story = t('story.paragraphs', { returnObjects: true }) as string[];
   const timeline = t('timeline.items', { returnObjects: true }) as TimelineItem[];
@@ -30,6 +32,7 @@ export default function AboutPage() {
 
   return (
     <>
+      <Seo title={tc('seo.about.title')} description={tc('seo.about.description')} />
       <Section spacing="lg">
         <div className="grid items-center gap-12 lg:grid-cols-[1.2fr_1fr]">
           <div>

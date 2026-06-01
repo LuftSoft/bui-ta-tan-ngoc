@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { ArrowLeft, ArrowRight, ExternalLink, Github } from 'lucide-react';
+import { Seo } from '../components/Seo';
 import { Container } from '../components/layout/Container';
 import { Tag } from '../components/ui/Tag';
 import { Button } from '../components/ui/Button';
@@ -29,6 +30,14 @@ export default function ProjectDetailPage() {
 
   return (
     <article>
+      <Seo
+        title={frontmatter.title}
+        description={frontmatter.excerpt}
+        image={frontmatter.cover}
+        type="article"
+        publishedAt={frontmatter.publishedAt}
+        tags={frontmatter.tags}
+      />
       <header className="border-b border-border bg-card/30">
         <Container className="max-w-5xl py-16 sm:py-24">
           <Reveal>

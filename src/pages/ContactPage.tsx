@@ -4,6 +4,7 @@ import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
 import { CheckCircle2, Clock, Mail, MapPin, Send } from 'lucide-react';
+import { Seo } from '../components/Seo';
 import { Section } from '../components/ui/Section';
 import { Eyebrow } from '../components/ui/Eyebrow';
 import { Button } from '../components/ui/Button';
@@ -32,6 +33,7 @@ function buildSchema(t: (k: string) => string) {
 
 export default function ContactPage() {
   const { t } = useTranslation('contact');
+  const { t: tc } = useTranslation();
   const [submitted, setSubmitted] = useState(false);
   const [submitError, setSubmitError] = useState<string | null>(null);
 
@@ -74,6 +76,7 @@ export default function ContactPage() {
 
   return (
     <Section spacing="lg">
+      <Seo title={tc('seo.contact.title')} description={tc('seo.contact.description')} />
       <div className="grid gap-12 lg:grid-cols-[1fr_1.6fr]">
         <aside className="space-y-6 lg:sticky lg:top-24 lg:self-start">
           <Reveal>
