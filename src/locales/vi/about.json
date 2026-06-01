@@ -1,0 +1,86 @@
+{
+  "hero": {
+    "eyebrow": "Giới thiệu",
+    "title": "Mình là Tân Ngọc — freelance fullstack developer làm việc tại Việt Nam.",
+    "subtitle": "Mình giúp founder và team nhỏ ship sản phẩm web chỉn chu. Sáu năm code, và mỗi sáng thứ Hai vẫn thấy háo hức."
+  },
+  "story": {
+    "eyebrow": "Câu chuyện",
+    "title": "Mình đến với nghề thế nào",
+    "paragraphs": [
+      "Mình bắt đầu làm web từ thời cấp ba vì muốn chia sẻ những thứ đang học. Vọc một theme Wordpress là dính luôn với vòng lặp ship → thấy người dùng dùng → sửa.",
+      "Bốn năm làm product company ở TP.HCM — đầu tiên là dashboard fintech, sau đó nền tảng logistics. Cả hai dạy mình quý trọng phần 'nhàm chán' của nghề: data model, deploy, đuôi dài các edge case.",
+      "Giờ mình freelance toàn thời gian. Phần lớn công việc là giúp founder đi từ ý tưởng đến launch, hoặc rescue product đã vượt khỏi codebase đầu tiên."
+    ]
+  },
+  "timeline": {
+    "eyebrow": "Hành trình",
+    "title": "Mình đã làm gì gần đây",
+    "items": [
+      {
+        "year": "2025 — nay",
+        "title": "Freelance Fullstack Developer",
+        "description": "Quizzle, Shopline, Tortuga và vài khách hàng khác mình chưa thể gọi tên."
+      },
+      {
+        "year": "2023 — 2024",
+        "title": "Senior Engineer · Logix",
+        "description": "Dẫn dắt rebuild dispatcher giao hàng last-mile, phục vụ 400+ tài xế mỗi ngày."
+      },
+      {
+        "year": "2021 — 2023",
+        "title": "Fullstack Engineer · Finhub",
+        "description": "Sở hữu luồng onboarding merchant và refactor toàn bộ queue thanh toán."
+      },
+      {
+        "year": "2020",
+        "title": "Cử nhân Khoa học Máy tính",
+        "description": "Trường Đại học Công nghệ Thông tin, ĐHQG-HCM."
+      }
+    ]
+  },
+  "skills": {
+    "eyebrow": "Stack",
+    "title": "Mình hay dùng",
+    "groups": {
+      "frontend": {
+        "label": "Frontend",
+        "items": ["React", "Next.js", "TypeScript", "Tailwind CSS", "Vite", "Framer Motion"]
+      },
+      "backend": {
+        "label": "Backend",
+        "items": ["Node.js", "Express", "tRPC", "Prisma", "Postgres", "Supabase"]
+      },
+      "mobile": {
+        "label": "Mobile",
+        "items": ["React Native", "Expo", "Stripe Mobile"]
+      },
+      "infra": {
+        "label": "Infra & DX",
+        "items": ["Docker", "GitHub Actions", "Vercel", "Cloudflare", "Sentry"]
+      }
+    }
+  },
+  "values": {
+    "eyebrow": "Nguyên tắc",
+    "title": "Cách mình làm việc",
+    "items": [
+      {
+        "title": "Ship hằng tuần",
+        "description": "Nếu chưa thấy được trên staging URL thì chưa gọi là tiến độ."
+      },
+      {
+        "title": "Tech nhàm chán, thực thi sắc nét",
+        "description": "Chọn công cụ đã được chứng minh, dành năng lượng cho chi tiết người dùng cảm nhận được."
+      },
+      {
+        "title": "Scope trung thực",
+        "description": "Mình thà nói 'quý này chưa làm được' hơn là sai deadline bạn đã lên kế hoạch xung quanh."
+      },
+      {
+        "title": "Để mọi thứ ngăn nắp",
+        "description": "Test ở chỗ cần, docs cho người tiếp theo, không TODO lửng lơ."
+      }
+    ]
+  }
+}

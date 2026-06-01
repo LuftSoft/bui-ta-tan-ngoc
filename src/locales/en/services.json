@@ -1,0 +1,92 @@
+{
+  "hero": {
+    "eyebrow": "Services",
+    "title": "Engagements I run",
+    "subtitle": "Four ways we can work together — pick the closest match and we'll shape the details on a call."
+  },
+  "items": {
+    "web": {
+      "title": "Web application",
+      "tagline": "End-to-end product development.",
+      "description": "I design, build and launch fullstack web apps in React/TypeScript with a Postgres or Supabase backend. Best for founders going from zero to first paying customers, or teams replacing a legacy product.",
+      "deliverables": [
+        "Discovery brief + technical proposal",
+        "Component library + design tokens",
+        "Production app on a custom domain",
+        "Handover documentation + 30-day support"
+      ],
+      "timeline": "6 — 12 weeks",
+      "startingPrice": "from $8,000"
+    },
+    "mobile": {
+      "title": "Mobile app",
+      "tagline": "iOS + Android with React Native.",
+      "description": "Cross-platform apps that share design tokens and business logic with your web product. Native modules where they matter (payments, auth, offline). I publish to the stores and set up over-the-air updates.",
+      "deliverables": [
+        "Expo project ready for OTA updates",
+        "App Store + Play Store submission",
+        "Crash reporting + analytics pipeline",
+        "Handover documentation + 30-day support"
+      ],
+      "timeline": "8 — 14 weeks",
+      "startingPrice": "from $10,000"
+    },
+    "mvp": {
+      "title": "MVP sprint",
+      "tagline": "Two to six weeks, idea to live demo.",
+      "description": "Founder-friendly fixed-scope sprint. We agree on the smallest thing that proves the idea, and I build exactly that — designed to be shown to users or investors at the end.",
+      "deliverables": [
+        "1-page scope doc (we sign off together)",
+        "Weekly Friday demo",
+        "Deployed staging URL the whole time",
+        "Source code, deploy keys and a 60-minute walkthrough"
+      ],
+      "timeline": "2 — 6 weeks",
+      "startingPrice": "from $4,000"
+    },
+    "consulting": {
+      "title": "Consulting & audits",
+      "tagline": "Short engagements that move the needle.",
+      "description": "Code review, architecture sessions, performance audits or pairing weeks. Useful when you have a team but want a second pair of eyes on a hard choice.",
+      "deliverables": [
+        "Written audit with prioritized findings",
+        "Live walkthrough call with your team",
+        "Optional follow-up pairing days",
+        "30-day Slack/email window for questions"
+      ],
+      "timeline": "1 — 3 weeks",
+      "startingPrice": "from $1,500"
+    }
+  },
+  "faq": {
+    "eyebrow": "FAQ",
+    "title": "Common questions",
+    "items": [
+      {
+        "q": "How do you charge?",
+        "a": "Fixed-price for sprints and consulting; for larger builds I quote a fixed monthly retainer once the scope is clear. No hourly rate after the brief is signed off."
+      },
+      {
+        "q": "Do you work with non-Vietnamese clients?",
+        "a": "Yes — about half my work is remote with founders in Europe and North America. I write and speak English fluently and run async-friendly weekly check-ins."
+      },
+      {
+        "q": "Can you work with my existing team?",
+        "a": "Often, yes. I've slotted into product teams as a senior contractor and as a temporary tech lead. Code review and architecture work translates especially well."
+      },
+      {
+        "q": "What do you not do?",
+        "a": "I don't do pure design (no Figma → pixel-perfect handoff), and I avoid heavily regulated domains (healthcare, banking) where my experience is thin."
+      },
+      {
+        "q": "When can you start?",
+        "a": "Usually within 2 — 4 weeks of the kickoff call. Urgent rescues sometimes faster — ask."
+      }
+    ]
+  },
+  "cta": {
+    "title": "Not sure which fits?",
+    "subtitle": "Tell me about the problem in a sentence and I'll point at the right engagement.",
+    "button": "Start a conversation"
+  }
+}
