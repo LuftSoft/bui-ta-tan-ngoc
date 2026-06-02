@@ -25,7 +25,7 @@ export function ThemeToggle() {
           <button
             key={value}
             type="button"
-            onClick={() => setMode(value)}
+            onClick={(e) => setMode(value, { x: e.clientX, y: e.clientY })}
             aria-pressed={active}
             aria-label={t(`theme.${value}`)}
             className={cn(

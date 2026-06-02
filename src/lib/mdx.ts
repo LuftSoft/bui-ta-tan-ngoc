@@ -37,8 +37,6 @@ export interface ContentEntry<TFrontmatter> {
   slug: string;
   frontmatter: TFrontmatter;
   Component: ComponentType;
-  /** Raw MDX source string (for derived data like readingTime). Optional. */
-  raw?: string;
 }
 
 export type ProjectEntry = ContentEntry<ProjectFrontmatter>;
@@ -46,7 +44,6 @@ export type PostEntry = ContentEntry<PostFrontmatter>;
 
 function buildEntries<T>(
   modules: Record<string, MdxModule<T>>,
-  rawSources: Record<string, string>,
   pathRegex: RegExp,
 ): ContentEntry<T>[] {
   return Object.entries(modules).map(([path, mod]) => {
@@ -58,7 +55,6 @@ function buildEntries<T>(
       slug,
       frontmatter: { ...mod.frontmatter, slug },
       Component: mod.default,
-      raw: rawSources[path],
     };
   });
 }
@@ -99,11 +95,7 @@ const projectModules = import.meta.glob<MdxModule<ProjectFrontmatter>>(
   { eager: true },
 );
 
-const projects = buildEntries(
-  projectModules,
-  {},
-  /projects\/(en|vi)\/([^/]+)\.mdx$/,
-);
+const projects = buildEntries(projectModules, /projects\/(en|vi)\/([^/]+)\.mdx$/);
 
 export function listProjects(locale: Locale): ProjectEntry[] {
   return pickByLocale(projects, locale).sort((a, b) => {
@@ -145,24 +137,8 @@ export function getAdjacent(
 const postModules = import.meta.glob<MdxModule<PostFrontmatter>>('../content/posts/*/*.mdx', {
   eager: true,
 });
-const postRawSources = import.meta.glob<string>('../content/posts/*/*.mdx', {
-  eager: true,
-  query: '?raw',
-  import: 'default',
-});
 
-const posts: PostEntry[] = buildEntries(
-  postModules,
-  postRawSources,
-  /posts\/(en|vi)\/([^/]+)\.mdx$/,
-).map((entry) => {
-  const words = (entry.raw ?? '').replace(/```[\s\S]*?```/g, '').split(/\s+/).length;
-  const readingTime = Math.max(1, Math.round(words / 220));
-  return {
-    ...entry,
-    frontmatter: { ...entry.frontmatter, readingTime },
-  };
-});
+const posts: PostEntry[] = buildEntries(postModules, /posts\/(en|vi)\/([^/]+)\.mdx$/);
 
 export function listPosts(locale: Locale): PostEntry[] {
   return sortByDateDesc(pickByLocale(posts, locale));
