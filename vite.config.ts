@@ -30,4 +30,18 @@ export default defineConfig({
   optimizeDeps: {
     exclude: ['lucide-react'],
   },
+  build: {
+    chunkSizeWarningLimit: 600,
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          react: ['react', 'react-dom', 'react-router-dom'],
+          motion: ['framer-motion', 'lenis'],
+          i18n: ['i18next', 'react-i18next'],
+          supabase: ['@supabase/supabase-js'],
+          forms: ['react-hook-form', 'zod', '@hookform/resolvers'],
+        },
+      },
+    },
+  },
 });

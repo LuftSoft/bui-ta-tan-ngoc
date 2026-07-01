@@ -29,7 +29,7 @@ export default {
       },
       fontFamily: {
         sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
-        display: ['"Clash Display"', 'Inter', 'ui-sans-serif', 'sans-serif'],
+        display: ['"Bricolage Grotesque"', 'Inter', 'ui-sans-serif', 'sans-serif'],
         mono: ['"JetBrains Mono"', 'ui-monospace', 'monospace'],
       },
       fontSize: {
@@ -40,6 +40,8 @@ export default {
       animation: {
         'fade-in-up': 'fadeInUp 0.8s ease-out both',
         marquee: 'marquee 30s linear infinite',
+        'accordion-down': 'accordionDown 0.25s ease-out',
+        'accordion-up': 'accordionUp 0.2s ease-out',
       },
       keyframes: {
         fadeInUp: {
@@ -49,6 +51,14 @@ export default {
         marquee: {
           from: { transform: 'translateX(0)' },
           to: { transform: 'translateX(-50%)' },
+        },
+        accordionDown: {
+          from: { height: '0' },
+          to: { height: 'var(--radix-accordion-content-height)' },
+        },
+        accordionUp: {
+          from: { height: 'var(--radix-accordion-content-height)' },
+          to: { height: '0' },
         },
       },
     },

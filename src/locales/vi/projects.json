@@ -1,0 +1,21 @@
+{
+  "eyebrow": "Dự án chọn lọc",
+  "title": "Dự án",
+  "subtitle": "Một vài thứ mình đã ship gần đây. Mỗi mục kể trọn câu chuyện — bài toán, mình build gì, kết quả ra sao.",
+  "filter": {
+    "all": "Tất cả",
+    "label": "Lọc theo"
+  },
+  "empty": "Chưa có dự án nào khớp bộ lọc này.",
+  "detail": {
+    "role": "Vai trò",
+    "year": "Năm",
+    "client": "Khách hàng",
+    "stack": "Stack",
+    "liveSite": "Trang live",
+    "sourceCode": "Source code",
+    "back": "Về danh sách dự án",
+    "prev": "Trước",
+    "next": "Tiếp"
+  }
+}

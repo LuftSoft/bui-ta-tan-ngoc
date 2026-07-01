@@ -4,6 +4,89 @@
     "title": "I build fast, polished web products.",
     "subtitle": "Hi, I'm Tan Ngoc. I design and ship end-to-end web apps for startups and founders who care about craft.",
     "primaryCta": "Start a project",
-    "secondaryCta": "See my work"
+    "secondaryCta": "See my work",
+    "availability": "Available for new work · Jun 2026"
+  },
+  "trust": {
+    "label": "Tools I reach for daily"
+  },
+  "services": {
+    "eyebrow": "Services",
+    "title": "What I can build for you",
+    "subtitle": "From idea to launch — or just the parts you need help with.",
+    "items": {
+      "web": {
+        "title": "Web applications",
+        "description": "Full-stack web apps with React, TypeScript and a database — built to ship and built to scale."
+      },
+      "mobile": {
+        "title": "Mobile apps",
+        "description": "Cross-platform iOS and Android with React Native, sharing logic with the web."
+      },
+      "consulting": {
+        "title": "Consulting & audits",
+        "description": "Code review, architecture sessions, performance audits — short engagements that move the needle."
+      },
+      "mvp": {
+        "title": "MVP sprints",
+        "description": "Founder-friendly two-to-six week sprints to turn an idea into something real you can show users."
+      }
+    }
+  },
+  "projects": {
+    "eyebrow": "Featured work",
+    "title": "Recent projects",
+    "viewAll": "View all projects"
+  },
+  "process": {
+    "eyebrow": "Process",
+    "title": "How I work",
+    "subtitle": "A predictable rhythm so we know what's next, every week.",
+    "steps": {
+      "discover": {
+        "title": "Discover",
+        "description": "We map the problem, users and constraints. You get a written brief before any code."
+      },
+      "design": {
+        "title": "Design",
+        "description": "Wireframes and a shared visual direction so we agree on the look before we build."
+      },
+      "build": {
+        "title": "Build",
+        "description": "Iterative weekly releases on a staging URL. You see progress every Friday."
+      },
+      "launch": {
+        "title": "Launch",
+        "description": "Production deploy, handover docs, and 30 days of post-launch support included."
+      }
+    }
+  },
+  "testimonials": {
+    "eyebrow": "Kind words",
+    "title": "From people I've worked with",
+    "items": {
+      "one": {
+        "quote": "Tan Ngoc shipped our MVP in five weeks — clean code and an interface that finally feels like our product.",
+        "name": "Linh Pham",
+        "role": "Founder, Quizzle"
+      },
+      "two": {
+        "quote": "Responsive, thoughtful and obsessed with the details. The dashboard he rebuilt is twice as fast.",
+        "name": "Marc Dubois",
+        "role": "CTO, Shopline"
+      },
+      "three": {
+        "quote": "Pleasure to work with. Asked the right questions before writing a single line of code.",
+        "name": "An Nguyen",
+        "role": "Product Lead, Tortuga"
+      }
+    }
+  },
+  "cta": {
+    "eyebrow": "Let's build",
+    "title": "Got something in mind?",
+    "subtitle": "Tell me about your project — I read every message and reply within 24 hours.",
+    "primary": "Start a project",
+    "secondary": "tanngoc.dev@gmail.com"
   }
 }

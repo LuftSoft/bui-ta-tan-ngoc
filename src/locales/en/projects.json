@@ -1,0 +1,21 @@
+{
+  "eyebrow": "Selected work",
+  "title": "Projects",
+  "subtitle": "A few things I've shipped recently. Each entry tells the story — the problem, what I built, and what it moved.",
+  "filter": {
+    "all": "All",
+    "label": "Filter by"
+  },
+  "empty": "No projects match that filter yet.",
+  "detail": {
+    "role": "Role",
+    "year": "Year",
+    "client": "Client",
+    "stack": "Stack",
+    "liveSite": "Live site",
+    "sourceCode": "Source code",
+    "back": "Back to projects",
+    "prev": "Previous",
+    "next": "Next"
+  }
+}

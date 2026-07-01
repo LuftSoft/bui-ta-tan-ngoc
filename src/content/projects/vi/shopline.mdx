@@ -1,0 +1,34 @@
+---
+title: "Shopline"
+slug: "shopline"
+excerpt: "Rebuild dashboard e-commerce — gấp đôi tốc độ load và dọn sạch data model."
+cover: "/assets/shop_phone.png"
+tags: ["React", "Node", "Postgres"]
+client: "Shopline"
+year: 2024
+role: "Fullstack Developer"
+stack: ["React", "Node.js", "Postgres", "Prisma", "Docker"]
+featured: true
+publishedAt: "2024-11-02"
+---
+
+## Bài toán
+
+Dashboard admin của Shopline đã phình thành Angular monolith mất 6 giây mới paint, có 3 nguồn data chồng chéo. Seller phải đợi mỗi lần click trang.
+
+## Mình đã build
+
+- Vỏ React + Vite mới, code splitting theo route, edge cache cho view chủ yếu là đọc
+- Gộp 3 API legacy về sau một GraphQL gateway typed bằng Node
+- Migrate schema orders sang Postgres với index đúng và cờ soft-delete
+- Set up Docker Compose môi trường dev — onboard contractor mới chỉ mất **15 phút** thay vì cả ngày
+
+## Kết quả
+
+- Largest Contentful Paint giảm từ **6.1 s → 1.8 s** ở dashboard home
+- Tháng sau khi launch, seller ship được nhiều đơn hơn **22%/ngày** (theo analytics của họ)
+- Loại bỏ 2/3 background sync job đã lặng lẽ fail suốt nhiều tháng
+
+## Bước tiếp
+
+Chuyển GraphQL gateway sang Hono trên Cloudflare Workers — hầu hết query giờ chạy dưới 50 ms server time, edge runtime sẽ cắt thêm 100+ ms round trip từ châu Á.

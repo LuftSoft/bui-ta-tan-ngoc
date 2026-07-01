@@ -1,0 +1,57 @@
+{
+  "hero": {
+    "eyebrow": "Liên hệ",
+    "title": "Kể mình nghe về dự án của bạn.",
+    "subtitle": "Điền form, mình sẽ phản hồi trong 24 giờ. Càng nhiều context, phản hồi đầu càng chất lượng."
+  },
+  "sidebar": {
+    "email": "Email trực tiếp",
+    "responseTime": "Phản hồi trong 24h",
+    "location": "Ở Việt Nam · làm việc toàn cầu"
+  },
+  "form": {
+    "name": "Tên của bạn",
+    "namePlaceholder": "Nguyễn Văn A",
+    "email": "Email",
+    "emailPlaceholder": "ban@congty.com",
+    "projectType": "Loại dự án",
+    "projectTypeOptions": {
+      "web": "Web application",
+      "mobile": "Mobile app",
+      "mvp": "MVP Sprint",
+      "consulting": "Tư vấn / Audit",
+      "other": "Khác"
+    },
+    "budget": "Ngân sách",
+    "budgetOptions": {
+      "under_5k": "Dưới $5k",
+      "5_10k": "$5k — $10k",
+      "10_25k": "$10k — $25k",
+      "25k_plus": "$25k+",
+      "not_sure": "Chưa chắc"
+    },
+    "timeline": "Tiến độ",
+    "timelineOptions": {
+      "asap": "Càng sớm càng tốt",
+      "1_3m": "1 — 3 tháng tới",
+      "3_6m": "3 — 6 tháng tới",
+      "exploring": "Đang tham khảo thôi"
+    },
+    "message": "Về dự án",
+    "messagePlaceholder": "Bạn đang xây gì, vấn đề là gì, dành cho ai?",
+    "submit": "Gửi inquiry",
+    "submitting": "Đang gửi…",
+    "errors": {
+      "name": "Vui lòng nhập tên.",
+      "email": "Email không hợp lệ.",
+      "projectType": "Chọn loại dự án.",
+      "message": "Kể thêm chút về dự án (10 ký tự trở lên).",
+      "generic": "Có lỗi xảy ra. Bạn email trực tiếp cho mình nhé."
+    }
+  },
+  "success": {
+    "title": "Đã gửi — hẹn sớm gặp.",
+    "body": "Mình sẽ phản hồi trong 24 giờ. Nếu không thấy, check spam hoặc email trực tiếp cho mình.",
+    "sendAnother": "Gửi tin khác"
+  }
+}

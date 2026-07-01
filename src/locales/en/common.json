@@ -1,5 +1,35 @@
 {
   "brand": "tanngoc.dev",
+  "seo": {
+    "home": {
+      "title": "tanngoc.dev — Freelance fullstack developer",
+      "description": "Tan Ngoc — freelance fullstack developer building fast, polished web products for startups and founders."
+    },
+    "about": {
+      "title": "About",
+      "description": "About Tan Ngoc — a freelance fullstack developer based in Vietnam, six years shipping web products."
+    },
+    "services": {
+      "title": "Services",
+      "description": "Web apps, mobile apps, MVP sprints and consulting — engagements I run for startups and small teams."
+    },
+    "projects": {
+      "title": "Projects",
+      "description": "Selected freelance work — case studies of recent web and mobile products I've shipped."
+    },
+    "blog": {
+      "title": "Blog",
+      "description": "Short essays on shipping web products, freelance practice and the tools I use."
+    },
+    "contact": {
+      "title": "Contact",
+      "description": "Start a project conversation — I reply to every inquiry within 24 hours."
+    },
+    "notFound": {
+      "title": "Page not found",
+      "description": "The page you're looking for doesn't exist."
+    }
+  },
   "nav": {
     "home": "Home",
     "about": "About",
@@ -28,5 +58,8 @@
     "switch": "Switch language",
     "en": "English",
     "vi": "Vietnamese"
+  },
+  "a11y": {
+    "skipToContent": "Skip to content"
   }
 }

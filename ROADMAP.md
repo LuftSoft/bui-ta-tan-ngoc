@@ -105,7 +105,7 @@ For blog posts: drop `client`, `role`, `stack`, `liveUrl`, `repoUrl`; keep the r
 - `index.html`: brand meta + pre-hydration anti-flash script
 - `netlify.toml`: SPA redirect
 
-### Phase 1 — Design system + motion primitives
+### ✅ Phase 1 — Design system + motion primitives (DONE)
 
 **Goal**: reusable building blocks before any real page.
 
@@ -121,7 +121,7 @@ For blog posts: drop `client`, `role`, `stack`, `liveUrl`, `repoUrl`; keep the r
 
 **Deliverable**: a `/en/_styleguide` route (gated to dev) showcasing primitives — delete before prod or leave behind env flag.
 
-### Phase 2 — Home page (real)
+### ✅ Phase 2 — Home page (DONE)
 
 **Sections (top→bottom)**:
 1. Hero — large display heading, eyebrow, dual CTA, optional animated background grain/orbit
@@ -134,7 +134,7 @@ For blog posts: drop `client`, `role`, `stack`, `liveUrl`, `repoUrl`; keep the r
 
 i18n: full `home` namespace in both `en`/`vi`. Content lives in JSON (no MDX needed here).
 
-### Phase 3 — Projects (MDX)
+### ✅ Phase 3 — Projects (DONE)
 
 - `src/content/projects/{en,vi}/*.mdx` with frontmatter schema above
 - `lib/mdx.ts`: glob import `import.meta.glob('../content/projects/*/*.mdx', { eager: true })`, group by slug + locale, expose helpers `listProjects(locale)`, `getProject(locale, slug)`
@@ -142,14 +142,14 @@ i18n: full `home` namespace in both `en`/`vi`. Content lives in JSON (no MDX nee
 - `pages/ProjectDetailPage.tsx`: hero (cover, tags, meta), MDX body with custom components (`<Callout>`, `<Image>`, `<Code>`), next/prev nav
 - Image strategy: store under `public/projects/<slug>/`, serve WebP, `loading="lazy"`
 
-### Phase 4 — About + Services
+### ✅ Phase 4 — About + Services (DONE)
 
 - **About**: hero portrait/illustration, story prose, timeline (`<dl>` semantic), skills grouped (Frontend/Backend/Cloud), values
 - **Services**: per-service card detail (deliverables, timeline, starting price), FAQ accordion, CTA
 
 Content in i18n JSON; reuse Phase 1 primitives.
 
-### Phase 5 — Blog + Contact
+### ✅ Phase 5 — Blog + Contact (DONE)
 
 **Blog**:
 - Same MDX pipeline as projects, separate `src/content/posts/{en,vi}/*.mdx`
@@ -162,7 +162,7 @@ Content in i18n JSON; reuse Phase 1 primitives.
 - Add hCaptcha or basic rate-limit (Edge Function IP throttle)
 - Success state with calendar link (Cal.com / Calendly)
 
-### Phase 6 — SEO + polish + ship
+### ✅ Phase 6 — SEO + polish + ship (DONE)
 
 - `react-helmet-async` per page (title, description, canonical, OG, alternate `hreflang` for `en` ↔ `vi`)
 - `sitemap.xml` generator script (`scripts/build-sitemap.ts`) running in `postbuild`

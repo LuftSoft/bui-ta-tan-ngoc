@@ -1,0 +1,20 @@
+{
+  "eyebrow": "Ghi chú",
+  "title": "Bài viết",
+  "subtitle": "Những bài ngắn về ship sản phẩm web, đời freelance và công cụ mình dùng.",
+  "filter": {
+    "all": "Tất cả",
+    "label": "Lọc theo"
+  },
+  "empty": "Chưa có bài viết nào khớp bộ lọc này.",
+  "minRead": "{{count}} phút đọc",
+  "detail": {
+    "back": "Về danh sách bài viết",
+    "toc": "Trong bài này",
+    "shareLabel": "Chia sẻ",
+    "copyLink": "Sao chép link",
+    "linkCopied": "Đã sao chép",
+    "prev": "Trước",
+    "next": "Tiếp"
+  }
+}

@@ -1,0 +1,40 @@
+---
+title: "Quizzle"
+slug: "quizzle"
+excerpt: "Nền tảng quiz realtime cho lớp học — MVP đến launch trong 5 tuần."
+cover: "/assets/quizz_app.png"
+tags: ["Next.js", "Supabase", "Realtime"]
+client: "Quizzle Inc."
+year: 2025
+role: "Fullstack Developer & Tech Lead"
+stack: ["Next.js", "TypeScript", "Supabase", "Tailwind", "Vercel"]
+liveUrl: "https://quizzle.example.com"
+featured: true
+publishedAt: "2025-03-15"
+---
+
+## Bài toán
+
+Founder có 2 tháng trước đợt pilot đầu tiên ở trường. Họ cần một sản phẩm quiz realtime hoạt động — màn hình giáo viên, màn hình học sinh, bảng xếp hạng — chạy được trên Wi-Fi lớp học chập chờn.
+
+<Callout>
+  **Thời gian gắt.** 5 tuần từ kickoff tới ngày pilot, budget cho một developer duy nhất.
+</Callout>
+
+## Mình đã build
+
+- Dashboard giáo viên chạy game live với timer, skip, reveal control
+- Màn hình học sinh join bằng code, chạy mượt trên Chromebook 3 năm tuổi
+- Đồng bộ realtime qua Supabase Realtime channels — không cần WebSocket server riêng
+- Schema Postgres với row-level security để mỗi lớp chỉ thấy dữ liệu của mình
+- Import CSV ngân hàng câu hỏi 1-tap để giáo viên chuyển từ Kahoot trong vài phút
+
+## Kết quả
+
+- Pilot chạy ở 14 lớp với **zero downtime** qua hơn 200 game live
+- Độ trễ đồng bộ trung bình dưới **180 ms** dù dùng Wi-Fi lớp học
+- Founder gọi vốn pre-seed thành công 3 tuần sau launch nhờ demo trực tiếp
+
+## Bước tiếp
+
+Tách lịch sử điểm khỏi Realtime sang bảng `game_events` để phục vụ analytics, và thêm mode "spectate" cho hiệu trưởng.

@@ -1,0 +1,44 @@
+---
+title: "Shipping an MVP in five weeks without burning out"
+slug: "shipping-mvp-in-five-weeks"
+excerpt: "What I learned shipping Quizzle's classroom MVP solo, on a schedule that didn't end in tears."
+tags: ["Process", "MVP", "Freelance"]
+publishedAt: "2026-04-12"
+readingTime: 3
+---
+
+## Why five weeks?
+
+The Quizzle founders had a school pilot booked. Not "we'd like to do a pilot" — actual classrooms, actual dates, an actual signed letter. Five weeks meant five weeks.
+
+I've done these sprints before and learned the hard way: a fixed deadline does not mean a fixed scope. The two need to negotiate constantly.
+
+## The shape of the schedule
+
+I ran the engagement on a weekly cadence that's now my default:
+
+- **Monday**: planning call (30 min). What's the smallest version of this week's slice that still ships?
+- **Tue–Thu**: build. No meetings. The brief from Monday is the source of truth.
+- **Friday morning**: deploy to staging.
+- **Friday afternoon**: demo call (30 min). What did we learn? What does next Monday's call need to decide?
+
+Two calls a week. Both timeboxed. Everything else is async on Slack.
+
+## What I cut
+
+When the schedule slipped halfway through (a Stripe integration ate two days), we made a clean cut: leaderboard history dropped from the MVP, replaced with a "last 5 games" view that needed no extra table.
+
+<Callout variant="tip">
+  When you have to cut, pick the feature whose value is **least understood**. That's the one users
+  are least likely to notice missing — and you'll learn more by waiting.
+</Callout>
+
+## What I won't do again
+
+I tried to handle the design AND the build. By week three the design work was the bottleneck. Next time I'd either lock the design in week zero, or hand it to a collaborator from day one.
+
+## The thing that worked
+
+A staging URL the founders could send to friendly teachers from week two onwards. Three of those teachers became the people I sat with at the actual pilot, watching them use the thing.
+
+That's the real loop. Build, watch, fix. Everything else is supporting cast.

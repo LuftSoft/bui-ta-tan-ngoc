@@ -1,0 +1,86 @@
+{
+  "hero": {
+    "eyebrow": "About",
+    "title": "I'm Tan Ngoc — a freelance fullstack developer based in Vietnam.",
+    "subtitle": "I help founders and small teams ship web products that feel cared-for. Six years of writing software, and I still get excited every Monday."
+  },
+  "story": {
+    "eyebrow": "Story",
+    "title": "How I got here",
+    "paragraphs": [
+      "I started building websites in high school because I wanted to share what I was learning. One Wordpress theme later, I was hooked on the loop of ship → see people use it → fix.",
+      "I spent four years at product companies in Ho Chi Minh City — first on a fintech dashboard, then on a logistics platform. Both taught me to care about the boring half of the job: data models, deploys, and the long tail of edge cases.",
+      "Now I freelance full-time. Most of my work is helping founders go from idea to launch, or rescuing products that have outgrown their first codebase."
+    ]
+  },
+  "timeline": {
+    "eyebrow": "Timeline",
+    "title": "What I've been up to",
+    "items": [
+      {
+        "year": "2025 — now",
+        "title": "Freelance fullstack developer",
+        "description": "Quizzle, Shopline, Tortuga and a few other clients I can't name yet."
+      },
+      {
+        "year": "2023 — 2024",
+        "title": "Senior engineer · Logix",
+        "description": "Led the rebuild of a last-mile logistics dispatcher used by 400+ drivers daily."
+      },
+      {
+        "year": "2021 — 2023",
+        "title": "Fullstack engineer · Finhub",
+        "description": "Owned the merchant onboarding flow and refactored the payments queue end-to-end."
+      },
+      {
+        "year": "2020",
+        "title": "B.S. Computer Science",
+        "description": "University of Information Technology, VNU-HCM."
+      }
+    ]
+  },
+  "skills": {
+    "eyebrow": "Stack",
+    "title": "What I reach for",
+    "groups": {
+      "frontend": {
+        "label": "Frontend",
+        "items": ["React", "Next.js", "TypeScript", "Tailwind CSS", "Vite", "Framer Motion"]
+      },
+      "backend": {
+        "label": "Backend",
+        "items": ["Node.js", "Express", "tRPC", "Prisma", "Postgres", "Supabase"]
+      },
+      "mobile": {
+        "label": "Mobile",
+        "items": ["React Native", "Expo", "Stripe Mobile"]
+      },
+      "infra": {
+        "label": "Infra & DX",
+        "items": ["Docker", "GitHub Actions", "Vercel", "Cloudflare", "Sentry"]
+      }
+    }
+  },
+  "values": {
+    "eyebrow": "Principles",
+    "title": "How I work",
+    "items": [
+      {
+        "title": "Ship weekly",
+        "description": "If you can't see it on a staging URL, it isn't progress."
+      },
+      {
+        "title": "Boring tech, sharp execution",
+        "description": "I pick proven tools and spend the saved energy on the details users feel."
+      },
+      {
+        "title": "Honest scope",
+        "description": "I'd rather say 'not this quarter' than miss a deadline you planned around."
+      },
+      {
+        "title": "Leave things tidy",
+        "description": "Tests where they matter, docs for the next person, no leftover TODOs."
+      }
+    ]
+  }
+}
