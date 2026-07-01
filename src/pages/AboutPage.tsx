@@ -1,9 +1,9 @@
-import { useTranslation } from 'react-i18next';
-import { Seo } from '../components/Seo';
-import { Section } from '../components/ui/Section';
-import { Eyebrow } from '../components/ui/Eyebrow';
-import { Tag } from '../components/ui/Tag';
-import { Reveal } from '../components/motion/Reveal';
+import { useTranslation } from "react-i18next";
+import { Seo } from "../components/Seo";
+import { Section } from "../components/ui/Section";
+import { Eyebrow } from "../components/ui/Eyebrow";
+import { Tag } from "../components/ui/Tag";
+import { Reveal } from "../components/motion/Reveal";
 
 interface TimelineItem {
   year: string;
@@ -22,28 +22,40 @@ interface ValueItem {
 }
 
 export default function AboutPage() {
-  const { t } = useTranslation('about');
+  const { t } = useTranslation("about");
   const { t: tc } = useTranslation();
 
-  const story = t('story.paragraphs', { returnObjects: true }) as string[];
-  const timeline = t('timeline.items', { returnObjects: true }) as TimelineItem[];
-  const skillGroups = t('skills.groups', { returnObjects: true }) as Record<string, SkillGroup>;
-  const values = t('values.items', { returnObjects: true }) as ValueItem[];
+  const story = t("story.paragraphs", { returnObjects: true }) as string[];
+  const timeline = t("timeline.items", {
+    returnObjects: true,
+  }) as TimelineItem[];
+  const skillGroups = t("skills.groups", { returnObjects: true }) as Record<
+    string,
+    SkillGroup
+  >;
+  const values = t("values.items", { returnObjects: true }) as ValueItem[];
 
   return (
     <>
-      <Seo title={tc('seo.about.title')} description={tc('seo.about.description')} />
+      <Seo
+        title={tc("seo.about.title")}
+        description={tc("seo.about.description")}
+      />
       <Section spacing="lg">
         <div className="grid items-center gap-12 lg:grid-cols-[1.2fr_1fr]">
           <div>
             <Reveal>
-              <Eyebrow>{t('hero.eyebrow')}</Eyebrow>
+              <Eyebrow>{t("hero.eyebrow")}</Eyebrow>
             </Reveal>
             <Reveal delay={0.1}>
-              <h1 className="mt-6 font-display text-display-lg text-balance">{t('hero.title')}</h1>
+              <h1 className="mt-6 font-display text-display-lg text-balance">
+                {t("hero.title")}
+              </h1>
             </Reveal>
             <Reveal delay={0.2}>
-              <p className="mt-6 max-w-xl text-lg text-muted-fg text-pretty">{t('hero.subtitle')}</p>
+              <p className="mt-6 max-w-xl text-lg text-muted-fg text-pretty">
+                {t("hero.subtitle")}
+              </p>
             </Reveal>
           </div>
           <Reveal delay={0.15}>
@@ -55,7 +67,7 @@ export default function AboutPage() {
               <img
                 src="/assets/avatar.jpg"
                 alt="Tan Ngoc"
-                className="relative h-full w-full object-cover"
+                className="relative h-full w-full object-cover scale-[1.5]"
                 loading="lazy"
               />
             </div>
@@ -67,16 +79,20 @@ export default function AboutPage() {
         <div className="grid gap-12 lg:grid-cols-[1fr_1.6fr]">
           <div>
             <Reveal>
-              <Eyebrow>{t('story.eyebrow')}</Eyebrow>
+              <Eyebrow>{t("story.eyebrow")}</Eyebrow>
             </Reveal>
             <Reveal delay={0.1}>
-              <h2 className="mt-4 font-display text-display-md text-balance">{t('story.title')}</h2>
+              <h2 className="mt-4 font-display text-display-md text-balance">
+                {t("story.title")}
+              </h2>
             </Reveal>
           </div>
           <div className="space-y-5">
             {story.map((p, i) => (
               <Reveal key={i} delay={i * 0.08}>
-                <p className="text-lg leading-relaxed text-fg/90 text-pretty">{p}</p>
+                <p className="text-lg leading-relaxed text-fg/90 text-pretty">
+                  {p}
+                </p>
               </Reveal>
             ))}
           </div>
@@ -86,10 +102,12 @@ export default function AboutPage() {
       <Section spacing="lg">
         <div className="max-w-2xl">
           <Reveal>
-            <Eyebrow>{t('timeline.eyebrow')}</Eyebrow>
+            <Eyebrow>{t("timeline.eyebrow")}</Eyebrow>
           </Reveal>
           <Reveal delay={0.1}>
-            <h2 className="mt-4 font-display text-display-md text-balance">{t('timeline.title')}</h2>
+            <h2 className="mt-4 font-display text-display-md text-balance">
+              {t("timeline.title")}
+            </h2>
           </Reveal>
         </div>
 
@@ -99,8 +117,12 @@ export default function AboutPage() {
               <div className="grid gap-4 p-6 sm:grid-cols-[180px_1fr] sm:p-8">
                 <dt className="font-mono text-sm text-accent">{item.year}</dt>
                 <dd>
-                  <div className="font-display text-xl font-semibold">{item.title}</div>
-                  <p className="mt-2 text-muted-fg text-pretty">{item.description}</p>
+                  <div className="font-display text-xl font-semibold">
+                    {item.title}
+                  </div>
+                  <p className="mt-2 text-muted-fg text-pretty">
+                    {item.description}
+                  </p>
                 </dd>
               </div>
             </Reveal>
@@ -111,10 +133,12 @@ export default function AboutPage() {
       <Section spacing="lg" className="border-y border-border bg-card/30">
         <div className="max-w-2xl">
           <Reveal>
-            <Eyebrow>{t('skills.eyebrow')}</Eyebrow>
+            <Eyebrow>{t("skills.eyebrow")}</Eyebrow>
           </Reveal>
           <Reveal delay={0.1}>
-            <h2 className="mt-4 font-display text-display-md text-balance">{t('skills.title')}</h2>
+            <h2 className="mt-4 font-display text-display-md text-balance">
+              {t("skills.title")}
+            </h2>
           </Reveal>
         </div>
 
@@ -141,10 +165,12 @@ export default function AboutPage() {
       <Section spacing="lg">
         <div className="max-w-2xl">
           <Reveal>
-            <Eyebrow>{t('values.eyebrow')}</Eyebrow>
+            <Eyebrow>{t("values.eyebrow")}</Eyebrow>
           </Reveal>
           <Reveal delay={0.1}>
-            <h2 className="mt-4 font-display text-display-md text-balance">{t('values.title')}</h2>
+            <h2 className="mt-4 font-display text-display-md text-balance">
+              {t("values.title")}
+            </h2>
           </Reveal>
         </div>
 
@@ -152,10 +178,16 @@ export default function AboutPage() {
           {values.map((v, i) => (
             <Reveal key={i} delay={i * 0.08} className="h-full">
               <div className="flex h-full gap-5 rounded-2xl border border-border bg-card p-6">
-                <span className="mt-1 font-mono text-sm text-accent">0{i + 1}</span>
+                <span className="mt-1 font-mono text-sm text-accent">
+                  0{i + 1}
+                </span>
                 <div>
-                  <h3 className="font-display text-xl font-semibold">{v.title}</h3>
-                  <p className="mt-2 text-muted-fg text-pretty">{v.description}</p>
+                  <h3 className="font-display text-xl font-semibold">
+                    {v.title}
+                  </h3>
+                  <p className="mt-2 text-muted-fg text-pretty">
+                    {v.description}
+                  </p>
                 </div>
               </div>
             </Reveal>
